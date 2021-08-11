@@ -1,0 +1,2017 @@
+��bonds��cell_results��$25c4f442-fabf-11eb-1266-67f2166634f4��queued±published_objects��running¦output��body�.<div class="markdown"><h1>Lesson 1</h1>
+</div>�persist_js_state¤mime�text/html�last_run_timestamp�A�EcwTm�rootassignee��cell_id�$25c4f442-fabf-11eb-1266-67f2166634f4�depends_on_disabled_cells§runtime���errored��$1fe732a2-c34a-407a-9c2d-1443e7331773��queued±published_objects��running¦output��body��msg�hInitError: PyError (PyImport_ImportModule
+
+The Python package scipy could not be imported by pyimport. Usually this means
+that you did not install scipy in the Python version being used by PyCall.
+
+PyCall is currently configured to use the Python version at:
+
+/usr/bin/python3
+
+and you should use whatever mechanism you usually use (apt-get, pip, conda,
+etcetera) to install the Python package containing the scipy module.
+
+One alternative is to re-configure PyCall to use a different Python
+version on your system: set ENV["PYTHON"] to the path/name of the python
+executable you want to use, run Pkg.build("PyCall"), and re-launch Julia.
+
+Another alternative is to configure PyCall to use a Julia-specific Python
+distribution via the Conda.jl package (which installs a private Anaconda
+Python distribution), which has the advantage that packages can be installed
+and kept up-to-date via Julia.  As explained in the PyCall documentation,
+set ENV["PYTHON"]="", run Pkg.build("PyCall"), and re-launch Julia. Then,
+To install the scipy module, you can use `pyimport_conda("scipy", PKG)`,
+where PKG is the Anaconda package that contains the module scipy,
+or alternatively you can use the Conda package directly (via
+`using Conda` followed by `Conda.add` etcetera).
+
+) <class 'ModuleNotFoundError'>
+ModuleNotFoundError("No module named 'scipy'")
+
+during initialization of module MLDatasets�stacktrace���call�pyimport(::String)�inlined¤file�PyCall.jl�line�&�path�7/home/runner/.julia/packages/PyCall/BD546/src/PyCall.jl��call�,pyimport_conda(::String, ::String, ::String)�inlined¤file�PyCall.jl�line�Ĥpath�7/home/runner/.julia/packages/PyCall/BD546/src/PyCall.jl��call�pyimport_conda�inlinedäfile�PyCall.jl�line�äpath�7/home/runner/.julia/packages/PyCall/BD546/src/PyCall.jl��call�__init__()�inlined¤file�MLDatasets.jl�line>�path�?/home/runner/.julia/packages/MLDatasets/KMScX/src/MLDatasets.jl��call�1_include_from_serialized(::String, ::Vector{Any})�inlined¤file�loading.jl�line���path�./loading.jl��call�7_require_search_from_serialized(::Base.PkgId, ::String)�inlined¤file�loading.jl�line��path�./loading.jl��call�_require(::Base.PkgId)�inlined¤file�loading.jl�line���path�./loading.jl��call�require(::Base.PkgId)�inlined¤file�loading.jl�line���path�./loading.jl��call�require(::Module, ::Symbol)�inlined¤file�loading.jl�line���path�./loading.jl��call�top-level scope�inlined¤file�2lesson1.jl#==#1fe732a2-c34a-407a-9c2d-1443e7331773�line�path�f/home/runner/work/julia-dl4us/julia-dl4us/notebooks/lesson1.jl#==#1fe732a2-c34a-407a-9c2d-1443e7331773�persist_js_state¤mime�'application/vnd.pluto.stacktrace+object�last_run_timestamp�A�E�����rootassignee��cell_id�$1fe732a2-c34a-407a-9c2d-1443e7331773�depends_on_disabled_cells§runtime��errored��$a92402f6-5db0-414f-8654-7148f95d7f66��queued±published_objects��running¦output��body��msg�%UndefVarError: imgs_train not defined�stacktrace���call�top-level scope�inlined¤file�2lesson1.jl#==#a92402f6-5db0-414f-8654-7148f95d7f66�line�path�f/home/runner/work/julia-dl4us/julia-dl4us/notebooks/lesson1.jl#==#a92402f6-5db0-414f-8654-7148f95d7f66�persist_js_state¤mime�'application/vnd.pluto.stacktrace+object�last_run_timestamp�A�E�0z��rootassignee��cell_id�$a92402f6-5db0-414f-8654-7148f95d7f66�depends_on_disabled_cells§runtime��errored��$467e95d6-033a-4b8f-8a0b-6dbf243b4480��queued±published_objects��running¦output��body��msg� UndefVarError: MNIST not defined�stacktrace���call�top-level scope�inlined¤file�2lesson1.jl#==#467e95d6-033a-4b8f-8a0b-6dbf243b4480�line�path�f/home/runner/work/julia-dl4us/julia-dl4us/notebooks/lesson1.jl#==#467e95d6-033a-4b8f-8a0b-6dbf243b4480�persist_js_state¤mime�'application/vnd.pluto.stacktrace+object�last_run_timestamp�A�E�'_ݬrootassignee��cell_id�$467e95d6-033a-4b8f-8a0b-6dbf243b4480�depends_on_disabled_cells§runtime��errored��$b78286fc-3734-4320-a141-d2e106e41aaa��queued±published_objects��running¦output��body��msg�(UndefVarError: with_terminal not defined�stacktrace���call�top-level scope�inlined¤file�2lesson1.jl#==#b78286fc-3734-4320-a141-d2e106e41aaa�line�path�f/home/runner/work/julia-dl4us/julia-dl4us/notebooks/lesson1.jl#==#b78286fc-3734-4320-a141-d2e106e41aaa�persist_js_state¤mime�'application/vnd.pluto.stacktrace+object�last_run_timestamp�A�E��I�rootassignee��cell_id�$b78286fc-3734-4320-a141-d2e106e41aaa�depends_on_disabled_cells§runtime��errored��$a6da1f4a-32e0-420e-bf58-aded92d6ff14��queued±published_objects��running¦output��body��msg�(UndefVarError: with_terminal not defined�stacktrace���call�top-level scope�inlined¤file�2lesson1.jl#==#a6da1f4a-32e0-420e-bf58-aded92d6ff14�line�path�f/home/runner/work/julia-dl4us/julia-dl4us/notebooks/lesson1.jl#==#a6da1f4a-32e0-420e-bf58-aded92d6ff14�persist_js_state¤mime�'application/vnd.pluto.stacktrace+object�last_run_timestamp�A�E����rootassignee��cell_id�$a6da1f4a-32e0-420e-bf58-aded92d6ff14�depends_on_disabled_cells§runtime��errored��$c31d87c0-a56d-4c44-b8cd-5ad184a8522e��queued±published_objects��running¦output��body��msg�"UndefVarError: x_train not defined�stacktrace���call�top-level scope�inlined¤file�2lesson1.jl#==#c31d87c0-a56d-4c44-b8cd-5ad184a8522e�line�path�f/home/runner/work/julia-dl4us/julia-dl4us/notebooks/lesson1.jl#==#c31d87c0-a56d-4c44-b8cd-5ad184a8522e�persist_js_state¤mime�'application/vnd.pluto.stacktrace+object�last_run_timestamp�A�E�W��rootassignee��cell_id�$c31d87c0-a56d-4c44-b8cd-5ad184a8522e�depends_on_disabled_cells§runtime��erroredñcell_dependencies��$25c4f442-fabf-11eb-1266-67f2166634f4��precedence_heuristic�cell_id�$25c4f442-fabf-11eb-1266-67f2166634f4�downstream_cells_map��upstream_cells_map��@md_str��getindex��$1fe732a2-c34a-407a-9c2d-1443e7331773��precedence_heuristic�cell_id�$1fe732a2-c34a-407a-9c2d-1443e7331773�downstream_cells_map��Statistics��onecold��$c31d87c0-a56d-4c44-b8cd-5ad184a8522e�PlutoUI��Plots��Flux��$b78286fc-3734-4320-a141-d2e106e41aaa�Colors��train!��$b78286fc-3734-4320-a141-d2e106e41aaa�crossentropy��$c31d87c0-a56d-4c44-b8cd-5ad184a8522e�@epochs��$b78286fc-3734-4320-a141-d2e106e41aaa�onehotbatch��$a92402f6-5db0-414f-8654-7148f95d7f66�DataLoader��$c31d87c0-a56d-4c44-b8cd-5ad184a8522e�MNIST��$467e95d6-033a-4b8f-8a0b-6dbf243b4480�upstream_cells_map��ENV��$a92402f6-5db0-414f-8654-7148f95d7f66��precedence_heuristic�cell_id�$a92402f6-5db0-414f-8654-7148f95d7f66�downstream_cells_map��y_train��$c31d87c0-a56d-4c44-b8cd-5ad184a8522e�anon18045588846911318995��x_train��$c31d87c0-a56d-4c44-b8cd-5ad184a8522e�anon10484423092090847962��y_test��$b78286fc-3734-4320-a141-d2e106e41aaa�$a6da1f4a-32e0-420e-bf58-aded92d6ff14�x_test��$b78286fc-3734-4320-a141-d2e106e41aaa�$a6da1f4a-32e0-420e-bf58-aded92d6ff14�upstream_cells_map��:��imgs_train��$467e95d6-033a-4b8f-8a0b-6dbf243b4480�imgs_test��$467e95d6-033a-4b8f-8a0b-6dbf243b4480�reshape��^��labels_test��$467e95d6-033a-4b8f-8a0b-6dbf243b4480�labels_train��$467e95d6-033a-4b8f-8a0b-6dbf243b4480�onehotbatch��$1fe732a2-c34a-407a-9c2d-1443e7331773�$467e95d6-033a-4b8f-8a0b-6dbf243b4480��precedence_heuristic�cell_id�$467e95d6-033a-4b8f-8a0b-6dbf243b4480�downstream_cells_map��imgs_train��$a92402f6-5db0-414f-8654-7148f95d7f66�imgs_test��$a92402f6-5db0-414f-8654-7148f95d7f66�labels_test��$a92402f6-5db0-414f-8654-7148f95d7f66�labels_train��$a92402f6-5db0-414f-8654-7148f95d7f66�upstream_cells_map��MNIST.traindata��:��plot��Gray��MNIST.testdata��MNIST��$1fe732a2-c34a-407a-9c2d-1443e7331773�$b78286fc-3734-4320-a141-d2e106e41aaa��precedence_heuristic�cell_id�$b78286fc-3734-4320-a141-d2e106e41aaa�downstream_cells_map��anon18150119279045539471��upstream_cells_map��model��$c31d87c0-a56d-4c44-b8cd-5ad184a8522e�Flux��$1fe732a2-c34a-407a-9c2d-1443e7331773�train!��$1fe732a2-c34a-407a-9c2d-1443e7331773�y_test��$a92402f6-5db0-414f-8654-7148f95d7f66�loss��$c31d87c0-a56d-4c44-b8cd-5ad184a8522e�x_test��$a92402f6-5db0-414f-8654-7148f95d7f66�@epochs��$1fe732a2-c34a-407a-9c2d-1443e7331773�train_batched��$c31d87c0-a56d-4c44-b8cd-5ad184a8522e�Flux.params��Flux.Descent��with_terminal��accuracy��$c31d87c0-a56d-4c44-b8cd-5ad184a8522e�@show��$a6da1f4a-32e0-420e-bf58-aded92d6ff14��precedence_heuristic�cell_id�$a6da1f4a-32e0-420e-bf58-aded92d6ff14�downstream_cells_map��anon3996333399086201196��upstream_cells_map��with_terminal��y_test��$a92402f6-5db0-414f-8654-7148f95d7f66�accuracy��$c31d87c0-a56d-4c44-b8cd-5ad184a8522e�loss��$c31d87c0-a56d-4c44-b8cd-5ad184a8522e�println��x_test��$a92402f6-5db0-414f-8654-7148f95d7f66�$c31d87c0-a56d-4c44-b8cd-5ad184a8522e��precedence_heuristic�cell_id�$c31d87c0-a56d-4c44-b8cd-5ad184a8522e�downstream_cells_map��model��$b78286fc-3734-4320-a141-d2e106e41aaa�accuracy��$b78286fc-3734-4320-a141-d2e106e41aaa�$a6da1f4a-32e0-420e-bf58-aded92d6ff14�loss��$b78286fc-3734-4320-a141-d2e106e41aaa�$a6da1f4a-32e0-420e-bf58-aded92d6ff14�train_batched��$b78286fc-3734-4320-a141-d2e106e41aaa�upstream_cells_map��relu��onecold��$1fe732a2-c34a-407a-9c2d-1443e7331773�crossentropy��$1fe732a2-c34a-407a-9c2d-1443e7331773�softmax��y_train��$a92402f6-5db0-414f-8654-7148f95d7f66�Dense��Chain��^��DataLoader��$1fe732a2-c34a-407a-9c2d-1443e7331773�x_train��$a92402f6-5db0-414f-8654-7148f95d7f66�==��mean��cell_execution_order��$1fe732a2-c34a-407a-9c2d-1443e7331773�$25c4f442-fabf-11eb-1266-67f2166634f4�$467e95d6-033a-4b8f-8a0b-6dbf243b4480�$a92402f6-5db0-414f-8654-7148f95d7f66�$c31d87c0-a56d-4c44-b8cd-5ad184a8522e�$b78286fc-3734-4320-a141-d2e106e41aaa�$a6da1f4a-32e0-420e-bf58-aded92d6ff14�shortpath�lesson1.jl�process_status�ready�path�>/home/runner/work/julia-dl4us/julia-dl4us/notebooks/lesson1.jl�cell_order��$25c4f442-fabf-11eb-1266-67f2166634f4�$1fe732a2-c34a-407a-9c2d-1443e7331773�$467e95d6-033a-4b8f-8a0b-6dbf243b4480�$a92402f6-5db0-414f-8654-7148f95d7f66�$c31d87c0-a56d-4c44-b8cd-5ad184a8522e�$b78286fc-3734-4320-a141-d2e106e41aaa�$a6da1f4a-32e0-420e-bf58-aded92d6ff14�nbpkg��installed_versions��Statistics�stdlib�MLDatasets�0.5.9�PlutoUI�0.7.9�Flux�0.12.6�Plots�1.20.0�Colors�0.12.8�terminal_outputs��Statistics�]�[32m[1m   Installed[22m[39m LLVMExtra_jll ──────────────── v0.0.7+0
+[32m[1m   Installed[22m[39m LZO_jll ────────────────────── v2.10.1+0
+[32m[1m   Installed[22m[39m Fontconfig_jll ─────────────── v2.13.1+14
+[32m[1m   Installed[22m[39m Qt5Base_jll ────────────────── v5.15.3+0
+[32m[1m   Installed[22m[39m Adapt ──────────────────────── v3.3.1
+[32m[1m   Installed[22m[39m ExprTools ──────────────────── v0.1.6
+[32m[1m   Installed[22m[39m URIParser ──────────────────── v0.4.1
+[32m[1m   Installed[22m[39m PyCall ─────────────────────── v1.92.3
+[32m[1m   Installed[22m[39m EarCut_jll ─────────────────── v2.1.5+1
+[32m[1m   Installed[22m[39m Ogg_jll ────────────────────── v1.3.5+0
+[32m[1m   Installed[22m[39m Suppressor ─────────────────── v0.2.0
+[32m[1m   Installed[22m[39m PlotThemes ─────────────────── v2.0.1
+[32m[1m   Installed[22m[39m TimerOutputs ───────────────── v0.5.12
+[32m[1m   Installed[22m[39m IterTools ──────────────────── v1.3.0
+[32m[1m   Installed[22m[39m Requires ───────────────────── v1.1.3
+[32m[1m   Installed[22m[39m ForwardDiff ────────────────── v0.10.19
+[32m[1m   Installed[22m[39m Xorg_libXfixes_jll ─────────── v5.0.3+4
+[32m[1m   Installed[22m[39m x265_jll ───────────────────── v3.0.0+3
+[32m[1m   Installed[22m[39m Lz4_jll ────────────────────── v1.9.3+0
+[32m[1m   Installed[22m[39m XSLT_jll ───────────────────── v1.1.34+0
+[32m[1m   Installed[22m[39m PlotUtils ──────────────────── v1.0.11
+[32m[1m   Installed[22m[39m Conda ──────────────────────── v1.5.2
+[32m[1m   Installed[22m[39m Functors ───────────────────── v0.2.3
+[32m[1m   Installed[22m[39m StatsBase ──────────────────── v0.33.9
+[32m[1m   Installed[22m[39m libfdk_aac_jll ─────────────── v0.1.6+4
+[32m[1m   Installed[22m[39m Glib_jll ───────────────────── v2.68.3+0
+[32m[1m   Installed[22m[39m Blosc ──────────────────────── v0.7.0
+[32m[1m   Installed[22m[39m SortingAlgorithms ──────────── v1.0.1
+[32m[1m   Installed[22m[39m FillArrays ─────────────────── v0.12.1
+[32m[1m   Installed[22m[39m Preferences ────────────────── v1.2.2
+[32m[1m   Installed[22m[39m DataDeps ───────────────────── v0.7.7
+[32m[1m   Installed[22m[39m Plots ──────────────────────── v1.20.0
+[32m[1m   Installed[22m[39m Libmount_jll ───────────────── v2.35.0+0
+[32m[1m   Installed[22m[39m HDF5_jll ───────────────────── v1.12.0+1
+[32m[1m   Installed[22m[39m Gettext_jll ────────────────── v0.21.0+0
+[32m[1m   Installed[22m[39m Libglvnd_jll ───────────────── v1.3.0+3
+[32m[1m   Installed[22m[39m CEnum ──────────────────────── v0.4.1
+[32m[1m   Installed[22m[39m LaTeXStrings ───────────────── v1.2.1
+[32m[1m   Installed[22m[39m SpecialFunctions ───────────── v1.6.1
+[32m[1m   Installed[22m[39m GPUCompiler ────────────────── v0.12.8
+[32m[1m   Installed[22m[39m Libgpg_error_jll ───────────── v1.42.0+0
+[32m[1m   Installed[22m[39m Pixman_jll ─────────────────── v0.40.1+0
+[32m[1m   Installed[22m[39m FFMPEG ─────────────────────── v0.4.1
+[32m[1m   Installed[22m[39m StatsAPI ───────────────────── v1.0.0
+[32m[1m   Installed[22m[39m Xorg_xcb_util_jll ──────────── v0.4.0+1
+[32m[1m   Installed[22m[39m Missings ───────────────────── v1.0.0
+[32m[1m   Installed[22m[39m Bzip2_jll ──────────────────── v1.0.6+5
+[32m[1m   Installed[22m[39m Grisu ──────────────────────── v1.0.2
+[32m[1m   Installed[22m[39m Formatting ─────────────────── v0.4.2
+[32m[1m   Installed[22m[39m BinDeps ────────────────────── v1.0.2
+[32m[1m   Installed[22m[39m BufferedStreams ────────────── v1.0.0
+[32m[1m   Installed[22m[39m DocStringExtensions ────────── v0.8.5
+[32m[1m   Installed[22m[39m Xorg_libXdmcp_jll ──────────── v1.1.3+4
+[32m[1m   Installed[22m[39m GLFW_jll ───────────────────── v3.3.5+0
+[32m[1m   Installed[22m[39m Libuuid_jll ────────────────── v2.36.0+0
+[32m[1m   Installed[22m[39m Xorg_libX11_jll ────────────── v1.6.9+4
+[32m[1m   Installed[22m[39m Xorg_libXrandr_jll ─────────── v1.5.2+4
+[32m[1m   Installed[22m[39m NNlib ──────────────────────── v0.7.27
+[32m[1m   Installed[22m[39m XML2_jll ───────────────────── v2.9.12+0
+[32m[1m   Installed[22m[39m Showoff ────────────────────── v1.0.3
+[32m[1m   Installed[22m[39m AbstractTrees ──────────────── v0.3.4
+[32m[1m   Installed[22m[39m Juno ───────────────────────── v0.8.4
+[32m[1m   Installed[22m[39m ChainRulesCore ─────────────── v1.3.0
+[32m[1m   Installed[22m[39m MLDatasets ─────────────────── v0.5.9
+[32m[1m   Installed[22m[39m Cairo_jll ──────────────────── v1.16.0+6
+[32m[1m   Installed[22m[39m GR_jll ─────────────────────── v0.58.1+0
+[32m[1m   Installed[22m[39m Libgcrypt_jll ──────────────── v1.8.7+0
+[32m[1m   Installed[22m[39m BFloat16s ──────────────────── v0.1.0
+[32m[1m   Installed[22m[39m Latexify ───────────────────── v0.15.6
+[32m[1m   Installed[22m[39m x264_jll ───────────────────── v2020.7.14+2
+[32m[1m   Installed[22m[39m Xorg_libxkbfile_jll ────────── v1.1.0+4
+[32m[1m   Installed[22m[39m Xorg_xcb_util_keysyms_jll ──── v0.4.0+1
+[32m[1m   Installed[22m[39m DataStructures ─────────────── v0.18.10
+[32m[1m   Installed[22m[39m GPUArrays ──────────────────── v8.0.1
+[32m[1m   Installed[22m[39m Zygote ─────────────────────── v0.6.19
+[32m[1m   Installed[22m[39m OpenSSL_jll ────────────────── v1.1.10+0
+[32m[1m   Installed[22m[39m OpenSpecFun_jll ────────────── v0.5.5+0
+[32m[1m   Installed[22m[39m Zstd_jll ───────────────────── v1.5.0+0
+[32m[1m   Installed[22m[39m libass_jll ─────────────────── v0.14.0+4
+[32m[1m   Installed[22m[39m libvorbis_jll ──────────────── v1.3.7+0
+[32m[1m   Installed[22m[39m FreeType2_jll ──────────────── v2.10.1+5
+[32m[1m   Installed[22m[39m Xorg_libXau_jll ────────────── v1.0.9+4
+[32m[1m   Installed[22m[39m Wayland_jll ────────────────── v1.19.0+0
+[32m[1m   Installed[22m[39m FriBidi_jll ────────────────── v1.0.10+0
+[32m[1m   Installed[22m[39m Xorg_libXinerama_jll ───────── v1.1.4+4
+[32m[1m   Installed[22m[39m MacroTools ─────────────────── v0.5.7
+[32m[1m   Installed[22m[39m ZipFile ────────────────────── v0.9.3
+[32m[1m   Installed[22m[39m Colors ─────────────────────── v0.12.8
+[32m[1m   Installed[22m[39m Libffi_jll ─────────────────── v3.2.2+0
+[32m[1m   Installed[22m[39m FFMPEG_jll ─────────────────── v4.3.1+4
+[32m[1m   Installed[22m[39m GZip ───────────────────────── v0.5.1
+[32m[1m   Installed[22m[39m ColorSchemes ───────────────── v3.14.0
+[32m[1m   Installed[22m[39m GR ─────────────────────────── v0.58.1
+[32m[1m   Installed[22m[39m RecipesPipeline ────────────── v0.3.4
+[32m[1m   Installed[22m[39m VersionParsing ─────────────── v1.2.0
+[32m[1m   Installed[22m[39m Libtiff_jll ────────────────── v4.3.0+0
+[32m[1m   Installed[22m[39m Compat ─────────────────────── v3.32.0
+[32m[1m   Installed[22m[39m DiffResults ────────────────── v1.0.3
+[32m[1m   Installed[22m[39m LogExpFunctions ────────────── v0.3.0
+[32m[1m   Installed[22m[39m ColorTypes ─────────────────── v0.11.0
+[32m[1m   Installed[22m[39m NaNMath ────────────────────── v0.3.5
+[32m[1m   Installed[22m[39m MAT ────────────────────────── v0.10.1
+[32m[1m   Installed[22m[39m Xorg_xcb_util_image_jll ────── v0.4.0+1
+[32m[1m   Installed[22m[39m RandomNumbers ──────────────── v1.5.3
+[32m[1m   Installed[22m[39m Media ──────────────────────── v0.5.0
+[32m[1m   Installed[22m[39m Blosc_jll ──────────────────── v1.21.0+0
+[32m[1m   Installed[22m[39m Xorg_xcb_util_renderutil_jll ─ v0.3.9+1
+[32m[1m   Installed[22m[39m CommonSubexpressions ───────── v0.3.0
+[32m[1m   Installed[22m[39m IRTools ────────────────────── v0.4.3
+[32m[1m   Installed[22m[39m RecipesBase ────────────────── v1.1.1
+[32m[1m   Installed[22m[39m GeometryBasics ─────────────── v0.4.1
+[32m[1m   Installed[22m[39m AbstractFFTs ───────────────── v1.0.1
+[32m[1m   Installed[22m[39m HDF5 ───────────────────────── v0.15.6
+[32m[1m   Installed[22m[39m Wayland_protocols_jll ──────── v1.18.0+4
+[32m[1m   Installed[22m[39m Xorg_libpthread_stubs_jll ──── v0.1.0+3
+[32m[1m   Installed[22m[39m CodecZlib ──────────────────── v0.7.0
+[32m[1m   Installed[22m[39m PCRE_jll ───────────────────── v8.44.0+0
+[32m[1m   Installed[22m[39m Opus_jll ───────────────────── v1.3.2+0
+[32m[1m   Installed[22m[39m Xorg_xcb_util_wm_jll ───────── v0.4.1+1
+[32m[1m   Installed[22m[39m StructArrays ───────────────── v0.6.0
+[32m[1m   Installed[22m[39m JLLWrappers ────────────────── v1.3.0
+[32m[1m   Installed[22m[39m JpegTurbo_jll ──────────────── v2.1.0+0
+[32m[1m   Installed[22m[39m Measures ───────────────────── v0.3.1
+[32m[1m   Installed[22m[39m Scratch ────────────────────── v1.1.0
+[32m[1m   Installed[22m[39m ArrayInterface ─────────────── v3.1.23
+[32m[1m   Installed[22m[39m BinaryProvider ─────────────── v0.5.10
+[32m[1m   Installed[22m[39m ChainRules ─────────────────── v1.5.1
+[32m[1m   Installed[22m[39m Contour ────────────────────── v0.5.7
+[32m[1m   Installed[22m[39m Xorg_libxcb_jll ────────────── v1.13.0+3
+[32m[1m   Installed[22m[39m Xorg_libXext_jll ───────────── v1.3.4+4
+[32m[1m   Installed[22m[39m LibVPX_jll ─────────────────── v1.10.0+0
+[32m[1m   Installed[22m[39m Xorg_xkbcomp_jll ───────────── v1.4.2+4
+[32m[1m   Installed[22m[39m Xorg_libXcursor_jll ────────── v1.2.0+4
+[32m[1m   Installed[22m[39m StaticArrays ───────────────── v1.2.12
+[32m[1m   Installed[22m[39m LLVM ───────────────────────── v4.2.0
+[32m[1m   Installed[22m[39m Xorg_libXi_jll ─────────────── v1.7.10+4
+[32m[1m   Installed[22m[39m CUDA ───────────────────────── v3.3.5
+[32m[1m   Installed[22m[39m Xorg_xkeyboard_config_jll ──── v2.27.0+4
+[32m[1m   Installed[22m[39m ZygoteRules ────────────────── v0.2.1
+[32m[1m   Installed[22m[39m FixedPointNumbers ──────────── v0.8.4
+[32m[1m   Installed[22m[39m IfElse ─────────────────────── v0.1.0
+[32m[1m   Installed[22m[39m Static ─────────────────────── v0.3.0
+[32m[1m   Installed[22m[39m Random123 ──────────────────── v1.4.2
+[32m[1m   Installed[22m[39m Xorg_xtrans_jll ────────────── v1.4.0+3
+[32m[1m   Installed[22m[39m Expat_jll ──────────────────── v2.2.10+0
+[32m[1m   Installed[22m[39m Xorg_libXrender_jll ────────── v0.9.10+4
+[32m[1m   Installed[22m[39m TranscodingStreams ─────────── v0.9.6
+[32m[1m   Installed[22m[39m PlutoUI ────────────────────── v0.7.9
+[32m[1m   Installed[22m[39m DiffRules ──────────────────── v1.2.1
+[32m[1m   Installed[22m[39m NNlibCUDA ──────────────────── v0.1.7
+[32m[1m   Installed[22m[39m Libiconv_jll ───────────────── v1.16.1+1
+[32m[1m   Installed[22m[39m Flux ───────────────────────── v0.12.6
+[32m[1m   Installed[22m[39m libpng_jll ─────────────────── v1.6.38+0
+[32m[1m   Installed[22m[39m LAME_jll ───────────────────── v3.100.1+0
+[32m[1m   Installed[22m[39m Reexport ───────────────────── v1.1.0
+[32m[1m   Installed[22m[39m xkbcommon_jll ──────────────── v0.9.1+5
+[32m[1m   Installed[22m[39m IrrationalConstants ────────── v0.1.0
+[32m[1m  No Changes[22m[39m to `/tmp/jl_pa7U80/Project.toml`
+[32m[1m  No Changes[22m[39m to `/tmp/jl_pa7U80/Manifest.toml`
+[32m[1m    Building[22m[39m Conda ────→ `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/299304989a5e6473d985212c28928899c74e9421/build.log`
+[32m[1m    Building[22m[39m PyCall ───→ `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/169bb8ea6b1b143c5cf57df6d34d022a7b60c6db/build.log`
+[32m[1m    Building[22m[39m DataDeps ─→ `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/4f0e41ff461d42cfc62ff0de4f1cd44c6e6b3771/build.log`
+[32m[1m    Building[22m[39m GR ───────→ `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/182da592436e287758ded5be6e32c406de3a2e47/build.log`
+[32m[1m    Building[22m[39m HDF5 ─────→ `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/83173193dc242ce4b037f0263a7cc45afb5a0b85/build.log`
+[32m[1m    Building[22m[39m Random123 → `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/0e8b146557ad1c6deb1367655e052276690e71a3/build.log`
+[32m[1mPrecompiling[22m[39m project...
+[32m  ✓ [39m[90mIfElse[39m
+[32m  ✓ [39m[90mGZip[39m
+[32m  ✓ [39m[90mPreferences[39m
+[32m  ✓ [39m[90mBFloat16s[39m
+[32m  ✓ [39m[90mMacroTools[39m
+[32m  ✓ [39m[90mGrisu[39m
+[32m  ✓ [39m[90mReexport[39m
+[32m  ✓ [39m[90mURIParser[39m
+[32m  ✓ [39m[90mRecipesBase[39m
+[32m  ✓ [39m[90mAbstractTrees[39m
+[32m  ✓ [39m[90mFixedPointNumbers[39m
+[32m  ✓ [39m[90mLaTeXStrings[39m
+[32m  ✓ [39m[90mStatsAPI[39m
+[32m  ✓ [39m[90mFillArrays[39m
+[32m  ✓ [39m[90mCompat[39m
+[32m  ✓ [39m[90mNaNMath[39m
+[32m  ✓ [39m[90mCEnum[39m
+[32m  ✓ [39m[90mAdapt[39m
+[32m  ✓ [39m[90mFormatting[39m
+[32m  ✓ [39m[90mIterTools[39m
+[32m  ✓ [39m[90mTranscodingStreams[39m
+[32m  ✓ [39m[90mStaticArrays[39m
+[32m  ✓ [39m[90mExprTools[39m
+[32m  ✓ [39m[90mBinaryProvider[39m
+[32m  ✓ [39m[90mCompilerSupportLibraries_jll[39m
+[32m  ✓ [39m[90mAbstractFFTs[39m
+[32m  ✓ [39m[90mDocStringExtensions[39m
+[32m  ✓ [39m[90mSuppressor[39m
+[32m  ✓ [39m[90mMeasures[39m
+[32m  ✓ [39m[90mRequires[39m
+[32m  ✓ [39m[90mScratch[39m
+[32m  ✓ [39m[90mIrrationalConstants[39m
+[32m  ✓ [39m[90mZipFile[39m
+[32m  ✓ [39m[90mMissings[39m
+[32m  ✓ [39m[90mStatic[39m
+[32m  ✓ [39m[90mJLLWrappers[39m
+[32m  ✓ [39m[90mCommonSubexpressions[39m
+[32m  ✓ [39m[90mMedia[39m
+[32m  ✓ [39m[90mFunctors[39m
+[32m  ✓ [39m[90mZygoteRules[39m
+[32m  ✓ [39m[90mShowoff[39m
+[32m  ✓ [39m[90mIRTools[39m
+[32m  ✓ [39m[90mBinDeps[39m
+[32m  ✓ [39m[90mChainRulesCore[39m
+[32m  ✓ [39m[90mDataStructures[39m
+[32m  ✓ [39m[90mBufferedStreams[39m
+[32m  ✓ [39m[90mPyCall[39m
+[32m  ✓ [39m[90mCodecZlib[39m
+[32m  ✓ [39m[90mStructArrays[39m
+[32m  ✓ [39m[90mGPUArrays[39m
+[32m  ✓ [39m[90mDiffResults[39m
+[32m  ✓ [39m[90mContour[39m
+[32m  ✓ [39m[90mTimerOutputs[39m
+[32m  ✓ [39m[90mDataDeps[39m
+[32m  ✓ [39m[90mRandomNumbers[39m
+[32m  ✓ [39m[90mColorTypes[39m
+[32m  ✓ [39m[90mLogExpFunctions[39m
+[32m  ✓ [39m[90mLatexify[39m
+[32m  ✓ [39mPlutoUI
+[32m  ✓ [39m[90mArrayInterface[39m
+[32m  ✓ [39m[90mFriBidi_jll[39m
+[32m  ✓ [39m[90mLibuuid_jll[39m
+[32m  ✓ [39m[90mlibfdk_aac_jll[39m
+[32m  ✓ [39m[90mOpenSSL_jll[39m
+[32m  ✓ [39m[90mZstd_jll[39m
+[32m  ✓ [39m[90mPixman_jll[39m
+[32m  ✓ [39m[90mJpegTurbo_jll[39m
+[32m  ✓ [39m[90mExpat_jll[39m
+[32m  ✓ [39m[90mLibmount_jll[39m
+[32m  ✓ [39m[90mLibiconv_jll[39m
+[32m  ✓ [39m[90mXorg_libXdmcp_jll[39m
+[32m  ✓ [39m[90mlibpng_jll[39m
+[32m  ✓ [39m[90mLz4_jll[39m
+[32m  ✓ [39m[90mOgg_jll[39m
+[32m  ✓ [39m[90mXorg_libXau_jll[39m
+[32m  ✓ [39m[90mx264_jll[39m
+[32m  ✓ [39m[90mLibVPX_jll[39m
+[32m  ✓ [39m[90mXorg_xtrans_jll[39m
+[32m  ✓ [39m[90mLAME_jll[39m
+[32m  ✓ [39m[90mLibffi_jll[39m
+[32m  ✓ [39m[90mPCRE_jll[39m
+[32m  ✓ [39m[90mLibgpg_error_jll[39m
+[32m  ✓ [39m[90mx265_jll[39m
+[32m  ✓ [39m[90mBzip2_jll[39m
+[32m  ✓ [39m[90mOpenSpecFun_jll[39m
+[32m  ✓ [39m[90mLZO_jll[39m
+[32m  ✓ [39m[90mOpus_jll[39m
+[32m  ✓ [39m[90mLLVMExtra_jll[39m
+[32m  ✓ [39m[90mEarCut_jll[39m
+[32m  ✓ [39m[90mXorg_libpthread_stubs_jll[39m
+[32m  ✓ [39m[90mJuno[39m
+[32m  ✓ [39m[90mSortingAlgorithms[39m
+[32m  ✓ [39m[90mRandom123[39m
+[32m  ✓ [39m[90mNNlib[39m
+[32m  ✓ [39m[90mHDF5_jll[39m
+[32m  ✓ [39m[90mLibtiff_jll[39m
+[32m  ✓ [39mColors
+[32m  ✓ [39m[90mChainRules[39m
+[32m  ✓ [39m[90mXML2_jll[39m
+[32m  ✓ [39m[90mBlosc_jll[39m
+[32m  ✓ [39m[90mlibvorbis_jll[39m
+[32m  ✓ [39m[90mLibgcrypt_jll[39m
+[32m  ✓ [39m[90mFreeType2_jll[39m
+[32m  ✓ [39m[90mLLVM[39m
+[32m  ✓ [39m[90mSpecialFunctions[39m
+[32m  ✓ [39m[90mStatsBase[39m
+[32m  ✓ [39m[90mGettext_jll[39m
+[32m  ✓ [39m[90mWayland_jll[39m
+[32m  ✓ [39m[90mGeometryBasics[39m
+[32m  ✓ [39m[90mBlosc[39m
+[32m  ✓ [39m[90mlibass_jll[39m
+[32m  ✓ [39m[90mXSLT_jll[39m
+[32m  ✓ [39m[90mColorSchemes[39m
+[32m  ✓ [39m[90mDiffRules[39m
+[32m  ✓ [39m[90mFontconfig_jll[39m
+[32m  ✓ [39m[90mWayland_protocols_jll[39m
+[32m  ✓ [39m[90mGlib_jll[39m
+[32m  ✓ [39m[90mFFMPEG_jll[39m
+[32m  ✓ [39m[90mHDF5[39m
+[32m  ✓ [39m[90mXorg_libxcb_jll[39m
+[32m  ✓ [39m[90mGPUCompiler[39m
+[32m  ✓ [39m[90mFFMPEG[39m
+[32m  ✓ [39m[90mMAT[39m
+[32m  ✓ [39m[90mXorg_libX11_jll[39m
+[32m  ✓ [39m[90mForwardDiff[39m
+[32m  ✓ [39m[90mXorg_xcb_util_jll[39m
+[32m  ✓ [39m[90mPlotUtils[39m
+[32m  ✓ [39m[90mXorg_libxkbfile_jll[39m
+[32m  ✓ [39mMLDatasets
+[32m  ✓ [39m[90mXorg_libXext_jll[39m
+[32m  ✓ [39m[90mXorg_libXfixes_jll[39m
+[32m  ✓ [39m[90mXorg_libXrender_jll[39m
+[32m  ✓ [39m[90mXorg_xcb_util_image_jll[39m
+[32m  ✓ [39m[90mXorg_xcb_util_keysyms_jll[39m
+[32m  ✓ [39m[90mXorg_xcb_util_renderutil_jll[39m
+[32m  ✓ [39m[90mXorg_xcb_util_wm_jll[39m
+[32m  ✓ [39m[90mZygote[39m
+[32m  ✓ [39m[90mPlotThemes[39m
+[32m  ✓ [39m[90mXorg_xkbcomp_jll[39m
+[32m  ✓ [39m[90mRecipesPipeline[39m
+[32m  ✓ [39m[90mLibglvnd_jll[39m
+[32m  ✓ [39m[90mXorg_libXinerama_jll[39m
+[32m  ✓ [39m[90mXorg_libXi_jll[39m
+[32m  ✓ [39m[90mCairo_jll[39m
+[32m  ✓ [39m[90mXorg_libXrandr_jll[39m
+[32m  ✓ [39m[90mXorg_libXcursor_jll[39m
+[32m  ✓ [39m[90mXorg_xkeyboard_config_jll[39m
+[32m  ✓ [39m[90mGLFW_jll[39m
+[32m  ✓ [39m[90mxkbcommon_jll[39m
+[32m  ✓ [39m[90mQt5Base_jll[39m
+[32m  ✓ [39m[90mGR_jll[39m
+[32m  ✓ [39m[90mGR[39m
+[32m  ✓ [39m[90mCUDA[39m
+[32m  ✓ [39m[90mNNlibCUDA[39m
+[32m  ✓ [39mFlux
+[32m  ✓ [39mPlots
+  156 dependencies successfully precompiled in 150 seconds (17 already precompiled)
+�MLDatasets�]�[32m[1m   Installed[22m[39m LLVMExtra_jll ──────────────── v0.0.7+0
+[32m[1m   Installed[22m[39m LZO_jll ────────────────────── v2.10.1+0
+[32m[1m   Installed[22m[39m Fontconfig_jll ─────────────── v2.13.1+14
+[32m[1m   Installed[22m[39m Qt5Base_jll ────────────────── v5.15.3+0
+[32m[1m   Installed[22m[39m Adapt ──────────────────────── v3.3.1
+[32m[1m   Installed[22m[39m ExprTools ──────────────────── v0.1.6
+[32m[1m   Installed[22m[39m URIParser ──────────────────── v0.4.1
+[32m[1m   Installed[22m[39m PyCall ─────────────────────── v1.92.3
+[32m[1m   Installed[22m[39m EarCut_jll ─────────────────── v2.1.5+1
+[32m[1m   Installed[22m[39m Ogg_jll ────────────────────── v1.3.5+0
+[32m[1m   Installed[22m[39m Suppressor ─────────────────── v0.2.0
+[32m[1m   Installed[22m[39m PlotThemes ─────────────────── v2.0.1
+[32m[1m   Installed[22m[39m TimerOutputs ───────────────── v0.5.12
+[32m[1m   Installed[22m[39m IterTools ──────────────────── v1.3.0
+[32m[1m   Installed[22m[39m Requires ───────────────────── v1.1.3
+[32m[1m   Installed[22m[39m ForwardDiff ────────────────── v0.10.19
+[32m[1m   Installed[22m[39m Xorg_libXfixes_jll ─────────── v5.0.3+4
+[32m[1m   Installed[22m[39m x265_jll ───────────────────── v3.0.0+3
+[32m[1m   Installed[22m[39m Lz4_jll ────────────────────── v1.9.3+0
+[32m[1m   Installed[22m[39m XSLT_jll ───────────────────── v1.1.34+0
+[32m[1m   Installed[22m[39m PlotUtils ──────────────────── v1.0.11
+[32m[1m   Installed[22m[39m Conda ──────────────────────── v1.5.2
+[32m[1m   Installed[22m[39m Functors ───────────────────── v0.2.3
+[32m[1m   Installed[22m[39m StatsBase ──────────────────── v0.33.9
+[32m[1m   Installed[22m[39m libfdk_aac_jll ─────────────── v0.1.6+4
+[32m[1m   Installed[22m[39m Glib_jll ───────────────────── v2.68.3+0
+[32m[1m   Installed[22m[39m Blosc ──────────────────────── v0.7.0
+[32m[1m   Installed[22m[39m SortingAlgorithms ──────────── v1.0.1
+[32m[1m   Installed[22m[39m FillArrays ─────────────────── v0.12.1
+[32m[1m   Installed[22m[39m Preferences ────────────────── v1.2.2
+[32m[1m   Installed[22m[39m DataDeps ───────────────────── v0.7.7
+[32m[1m   Installed[22m[39m Plots ──────────────────────── v1.20.0
+[32m[1m   Installed[22m[39m Libmount_jll ───────────────── v2.35.0+0
+[32m[1m   Installed[22m[39m HDF5_jll ───────────────────── v1.12.0+1
+[32m[1m   Installed[22m[39m Gettext_jll ────────────────── v0.21.0+0
+[32m[1m   Installed[22m[39m Libglvnd_jll ───────────────── v1.3.0+3
+[32m[1m   Installed[22m[39m CEnum ──────────────────────── v0.4.1
+[32m[1m   Installed[22m[39m LaTeXStrings ───────────────── v1.2.1
+[32m[1m   Installed[22m[39m SpecialFunctions ───────────── v1.6.1
+[32m[1m   Installed[22m[39m GPUCompiler ────────────────── v0.12.8
+[32m[1m   Installed[22m[39m Libgpg_error_jll ───────────── v1.42.0+0
+[32m[1m   Installed[22m[39m Pixman_jll ─────────────────── v0.40.1+0
+[32m[1m   Installed[22m[39m FFMPEG ─────────────────────── v0.4.1
+[32m[1m   Installed[22m[39m StatsAPI ───────────────────── v1.0.0
+[32m[1m   Installed[22m[39m Xorg_xcb_util_jll ──────────── v0.4.0+1
+[32m[1m   Installed[22m[39m Missings ───────────────────── v1.0.0
+[32m[1m   Installed[22m[39m Bzip2_jll ──────────────────── v1.0.6+5
+[32m[1m   Installed[22m[39m Grisu ──────────────────────── v1.0.2
+[32m[1m   Installed[22m[39m Formatting ─────────────────── v0.4.2
+[32m[1m   Installed[22m[39m BinDeps ────────────────────── v1.0.2
+[32m[1m   Installed[22m[39m BufferedStreams ────────────── v1.0.0
+[32m[1m   Installed[22m[39m DocStringExtensions ────────── v0.8.5
+[32m[1m   Installed[22m[39m Xorg_libXdmcp_jll ──────────── v1.1.3+4
+[32m[1m   Installed[22m[39m GLFW_jll ───────────────────── v3.3.5+0
+[32m[1m   Installed[22m[39m Libuuid_jll ────────────────── v2.36.0+0
+[32m[1m   Installed[22m[39m Xorg_libX11_jll ────────────── v1.6.9+4
+[32m[1m   Installed[22m[39m Xorg_libXrandr_jll ─────────── v1.5.2+4
+[32m[1m   Installed[22m[39m NNlib ──────────────────────── v0.7.27
+[32m[1m   Installed[22m[39m XML2_jll ───────────────────── v2.9.12+0
+[32m[1m   Installed[22m[39m Showoff ────────────────────── v1.0.3
+[32m[1m   Installed[22m[39m AbstractTrees ──────────────── v0.3.4
+[32m[1m   Installed[22m[39m Juno ───────────────────────── v0.8.4
+[32m[1m   Installed[22m[39m ChainRulesCore ─────────────── v1.3.0
+[32m[1m   Installed[22m[39m MLDatasets ─────────────────── v0.5.9
+[32m[1m   Installed[22m[39m Cairo_jll ──────────────────── v1.16.0+6
+[32m[1m   Installed[22m[39m GR_jll ─────────────────────── v0.58.1+0
+[32m[1m   Installed[22m[39m Libgcrypt_jll ──────────────── v1.8.7+0
+[32m[1m   Installed[22m[39m BFloat16s ──────────────────── v0.1.0
+[32m[1m   Installed[22m[39m Latexify ───────────────────── v0.15.6
+[32m[1m   Installed[22m[39m x264_jll ───────────────────── v2020.7.14+2
+[32m[1m   Installed[22m[39m Xorg_libxkbfile_jll ────────── v1.1.0+4
+[32m[1m   Installed[22m[39m Xorg_xcb_util_keysyms_jll ──── v0.4.0+1
+[32m[1m   Installed[22m[39m DataStructures ─────────────── v0.18.10
+[32m[1m   Installed[22m[39m GPUArrays ──────────────────── v8.0.1
+[32m[1m   Installed[22m[39m Zygote ─────────────────────── v0.6.19
+[32m[1m   Installed[22m[39m OpenSSL_jll ────────────────── v1.1.10+0
+[32m[1m   Installed[22m[39m OpenSpecFun_jll ────────────── v0.5.5+0
+[32m[1m   Installed[22m[39m Zstd_jll ───────────────────── v1.5.0+0
+[32m[1m   Installed[22m[39m libass_jll ─────────────────── v0.14.0+4
+[32m[1m   Installed[22m[39m libvorbis_jll ──────────────── v1.3.7+0
+[32m[1m   Installed[22m[39m FreeType2_jll ──────────────── v2.10.1+5
+[32m[1m   Installed[22m[39m Xorg_libXau_jll ────────────── v1.0.9+4
+[32m[1m   Installed[22m[39m Wayland_jll ────────────────── v1.19.0+0
+[32m[1m   Installed[22m[39m FriBidi_jll ────────────────── v1.0.10+0
+[32m[1m   Installed[22m[39m Xorg_libXinerama_jll ───────── v1.1.4+4
+[32m[1m   Installed[22m[39m MacroTools ─────────────────── v0.5.7
+[32m[1m   Installed[22m[39m ZipFile ────────────────────── v0.9.3
+[32m[1m   Installed[22m[39m Colors ─────────────────────── v0.12.8
+[32m[1m   Installed[22m[39m Libffi_jll ─────────────────── v3.2.2+0
+[32m[1m   Installed[22m[39m FFMPEG_jll ─────────────────── v4.3.1+4
+[32m[1m   Installed[22m[39m GZip ───────────────────────── v0.5.1
+[32m[1m   Installed[22m[39m ColorSchemes ───────────────── v3.14.0
+[32m[1m   Installed[22m[39m GR ─────────────────────────── v0.58.1
+[32m[1m   Installed[22m[39m RecipesPipeline ────────────── v0.3.4
+[32m[1m   Installed[22m[39m VersionParsing ─────────────── v1.2.0
+[32m[1m   Installed[22m[39m Libtiff_jll ────────────────── v4.3.0+0
+[32m[1m   Installed[22m[39m Compat ─────────────────────── v3.32.0
+[32m[1m   Installed[22m[39m DiffResults ────────────────── v1.0.3
+[32m[1m   Installed[22m[39m LogExpFunctions ────────────── v0.3.0
+[32m[1m   Installed[22m[39m ColorTypes ─────────────────── v0.11.0
+[32m[1m   Installed[22m[39m NaNMath ────────────────────── v0.3.5
+[32m[1m   Installed[22m[39m MAT ────────────────────────── v0.10.1
+[32m[1m   Installed[22m[39m Xorg_xcb_util_image_jll ────── v0.4.0+1
+[32m[1m   Installed[22m[39m RandomNumbers ──────────────── v1.5.3
+[32m[1m   Installed[22m[39m Media ──────────────────────── v0.5.0
+[32m[1m   Installed[22m[39m Blosc_jll ──────────────────── v1.21.0+0
+[32m[1m   Installed[22m[39m Xorg_xcb_util_renderutil_jll ─ v0.3.9+1
+[32m[1m   Installed[22m[39m CommonSubexpressions ───────── v0.3.0
+[32m[1m   Installed[22m[39m IRTools ────────────────────── v0.4.3
+[32m[1m   Installed[22m[39m RecipesBase ────────────────── v1.1.1
+[32m[1m   Installed[22m[39m GeometryBasics ─────────────── v0.4.1
+[32m[1m   Installed[22m[39m AbstractFFTs ───────────────── v1.0.1
+[32m[1m   Installed[22m[39m HDF5 ───────────────────────── v0.15.6
+[32m[1m   Installed[22m[39m Wayland_protocols_jll ──────── v1.18.0+4
+[32m[1m   Installed[22m[39m Xorg_libpthread_stubs_jll ──── v0.1.0+3
+[32m[1m   Installed[22m[39m CodecZlib ──────────────────── v0.7.0
+[32m[1m   Installed[22m[39m PCRE_jll ───────────────────── v8.44.0+0
+[32m[1m   Installed[22m[39m Opus_jll ───────────────────── v1.3.2+0
+[32m[1m   Installed[22m[39m Xorg_xcb_util_wm_jll ───────── v0.4.1+1
+[32m[1m   Installed[22m[39m StructArrays ───────────────── v0.6.0
+[32m[1m   Installed[22m[39m JLLWrappers ────────────────── v1.3.0
+[32m[1m   Installed[22m[39m JpegTurbo_jll ──────────────── v2.1.0+0
+[32m[1m   Installed[22m[39m Measures ───────────────────── v0.3.1
+[32m[1m   Installed[22m[39m Scratch ────────────────────── v1.1.0
+[32m[1m   Installed[22m[39m ArrayInterface ─────────────── v3.1.23
+[32m[1m   Installed[22m[39m BinaryProvider ─────────────── v0.5.10
+[32m[1m   Installed[22m[39m ChainRules ─────────────────── v1.5.1
+[32m[1m   Installed[22m[39m Contour ────────────────────── v0.5.7
+[32m[1m   Installed[22m[39m Xorg_libxcb_jll ────────────── v1.13.0+3
+[32m[1m   Installed[22m[39m Xorg_libXext_jll ───────────── v1.3.4+4
+[32m[1m   Installed[22m[39m LibVPX_jll ─────────────────── v1.10.0+0
+[32m[1m   Installed[22m[39m Xorg_xkbcomp_jll ───────────── v1.4.2+4
+[32m[1m   Installed[22m[39m Xorg_libXcursor_jll ────────── v1.2.0+4
+[32m[1m   Installed[22m[39m StaticArrays ───────────────── v1.2.12
+[32m[1m   Installed[22m[39m LLVM ───────────────────────── v4.2.0
+[32m[1m   Installed[22m[39m Xorg_libXi_jll ─────────────── v1.7.10+4
+[32m[1m   Installed[22m[39m CUDA ───────────────────────── v3.3.5
+[32m[1m   Installed[22m[39m Xorg_xkeyboard_config_jll ──── v2.27.0+4
+[32m[1m   Installed[22m[39m ZygoteRules ────────────────── v0.2.1
+[32m[1m   Installed[22m[39m FixedPointNumbers ──────────── v0.8.4
+[32m[1m   Installed[22m[39m IfElse ─────────────────────── v0.1.0
+[32m[1m   Installed[22m[39m Static ─────────────────────── v0.3.0
+[32m[1m   Installed[22m[39m Random123 ──────────────────── v1.4.2
+[32m[1m   Installed[22m[39m Xorg_xtrans_jll ────────────── v1.4.0+3
+[32m[1m   Installed[22m[39m Expat_jll ──────────────────── v2.2.10+0
+[32m[1m   Installed[22m[39m Xorg_libXrender_jll ────────── v0.9.10+4
+[32m[1m   Installed[22m[39m TranscodingStreams ─────────── v0.9.6
+[32m[1m   Installed[22m[39m PlutoUI ────────────────────── v0.7.9
+[32m[1m   Installed[22m[39m DiffRules ──────────────────── v1.2.1
+[32m[1m   Installed[22m[39m NNlibCUDA ──────────────────── v0.1.7
+[32m[1m   Installed[22m[39m Libiconv_jll ───────────────── v1.16.1+1
+[32m[1m   Installed[22m[39m Flux ───────────────────────── v0.12.6
+[32m[1m   Installed[22m[39m libpng_jll ─────────────────── v1.6.38+0
+[32m[1m   Installed[22m[39m LAME_jll ───────────────────── v3.100.1+0
+[32m[1m   Installed[22m[39m Reexport ───────────────────── v1.1.0
+[32m[1m   Installed[22m[39m xkbcommon_jll ──────────────── v0.9.1+5
+[32m[1m   Installed[22m[39m IrrationalConstants ────────── v0.1.0
+[32m[1m  No Changes[22m[39m to `/tmp/jl_pa7U80/Project.toml`
+[32m[1m  No Changes[22m[39m to `/tmp/jl_pa7U80/Manifest.toml`
+[32m[1m    Building[22m[39m Conda ────→ `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/299304989a5e6473d985212c28928899c74e9421/build.log`
+[32m[1m    Building[22m[39m PyCall ───→ `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/169bb8ea6b1b143c5cf57df6d34d022a7b60c6db/build.log`
+[32m[1m    Building[22m[39m DataDeps ─→ `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/4f0e41ff461d42cfc62ff0de4f1cd44c6e6b3771/build.log`
+[32m[1m    Building[22m[39m GR ───────→ `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/182da592436e287758ded5be6e32c406de3a2e47/build.log`
+[32m[1m    Building[22m[39m HDF5 ─────→ `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/83173193dc242ce4b037f0263a7cc45afb5a0b85/build.log`
+[32m[1m    Building[22m[39m Random123 → `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/0e8b146557ad1c6deb1367655e052276690e71a3/build.log`
+[32m[1mPrecompiling[22m[39m project...
+[32m  ✓ [39m[90mIfElse[39m
+[32m  ✓ [39m[90mGZip[39m
+[32m  ✓ [39m[90mPreferences[39m
+[32m  ✓ [39m[90mBFloat16s[39m
+[32m  ✓ [39m[90mMacroTools[39m
+[32m  ✓ [39m[90mGrisu[39m
+[32m  ✓ [39m[90mReexport[39m
+[32m  ✓ [39m[90mURIParser[39m
+[32m  ✓ [39m[90mRecipesBase[39m
+[32m  ✓ [39m[90mAbstractTrees[39m
+[32m  ✓ [39m[90mFixedPointNumbers[39m
+[32m  ✓ [39m[90mLaTeXStrings[39m
+[32m  ✓ [39m[90mStatsAPI[39m
+[32m  ✓ [39m[90mFillArrays[39m
+[32m  ✓ [39m[90mCompat[39m
+[32m  ✓ [39m[90mNaNMath[39m
+[32m  ✓ [39m[90mCEnum[39m
+[32m  ✓ [39m[90mAdapt[39m
+[32m  ✓ [39m[90mFormatting[39m
+[32m  ✓ [39m[90mIterTools[39m
+[32m  ✓ [39m[90mTranscodingStreams[39m
+[32m  ✓ [39m[90mStaticArrays[39m
+[32m  ✓ [39m[90mExprTools[39m
+[32m  ✓ [39m[90mBinaryProvider[39m
+[32m  ✓ [39m[90mCompilerSupportLibraries_jll[39m
+[32m  ✓ [39m[90mAbstractFFTs[39m
+[32m  ✓ [39m[90mDocStringExtensions[39m
+[32m  ✓ [39m[90mSuppressor[39m
+[32m  ✓ [39m[90mMeasures[39m
+[32m  ✓ [39m[90mRequires[39m
+[32m  ✓ [39m[90mScratch[39m
+[32m  ✓ [39m[90mIrrationalConstants[39m
+[32m  ✓ [39m[90mZipFile[39m
+[32m  ✓ [39m[90mMissings[39m
+[32m  ✓ [39m[90mStatic[39m
+[32m  ✓ [39m[90mJLLWrappers[39m
+[32m  ✓ [39m[90mCommonSubexpressions[39m
+[32m  ✓ [39m[90mMedia[39m
+[32m  ✓ [39m[90mFunctors[39m
+[32m  ✓ [39m[90mZygoteRules[39m
+[32m  ✓ [39m[90mShowoff[39m
+[32m  ✓ [39m[90mIRTools[39m
+[32m  ✓ [39m[90mBinDeps[39m
+[32m  ✓ [39m[90mChainRulesCore[39m
+[32m  ✓ [39m[90mDataStructures[39m
+[32m  ✓ [39m[90mBufferedStreams[39m
+[32m  ✓ [39m[90mPyCall[39m
+[32m  ✓ [39m[90mCodecZlib[39m
+[32m  ✓ [39m[90mStructArrays[39m
+[32m  ✓ [39m[90mGPUArrays[39m
+[32m  ✓ [39m[90mDiffResults[39m
+[32m  ✓ [39m[90mContour[39m
+[32m  ✓ [39m[90mTimerOutputs[39m
+[32m  ✓ [39m[90mDataDeps[39m
+[32m  ✓ [39m[90mRandomNumbers[39m
+[32m  ✓ [39m[90mColorTypes[39m
+[32m  ✓ [39m[90mLogExpFunctions[39m
+[32m  ✓ [39m[90mLatexify[39m
+[32m  ✓ [39mPlutoUI
+[32m  ✓ [39m[90mArrayInterface[39m
+[32m  ✓ [39m[90mFriBidi_jll[39m
+[32m  ✓ [39m[90mLibuuid_jll[39m
+[32m  ✓ [39m[90mlibfdk_aac_jll[39m
+[32m  ✓ [39m[90mOpenSSL_jll[39m
+[32m  ✓ [39m[90mZstd_jll[39m
+[32m  ✓ [39m[90mPixman_jll[39m
+[32m  ✓ [39m[90mJpegTurbo_jll[39m
+[32m  ✓ [39m[90mExpat_jll[39m
+[32m  ✓ [39m[90mLibmount_jll[39m
+[32m  ✓ [39m[90mLibiconv_jll[39m
+[32m  ✓ [39m[90mXorg_libXdmcp_jll[39m
+[32m  ✓ [39m[90mlibpng_jll[39m
+[32m  ✓ [39m[90mLz4_jll[39m
+[32m  ✓ [39m[90mOgg_jll[39m
+[32m  ✓ [39m[90mXorg_libXau_jll[39m
+[32m  ✓ [39m[90mx264_jll[39m
+[32m  ✓ [39m[90mLibVPX_jll[39m
+[32m  ✓ [39m[90mXorg_xtrans_jll[39m
+[32m  ✓ [39m[90mLAME_jll[39m
+[32m  ✓ [39m[90mLibffi_jll[39m
+[32m  ✓ [39m[90mPCRE_jll[39m
+[32m  ✓ [39m[90mLibgpg_error_jll[39m
+[32m  ✓ [39m[90mx265_jll[39m
+[32m  ✓ [39m[90mBzip2_jll[39m
+[32m  ✓ [39m[90mOpenSpecFun_jll[39m
+[32m  ✓ [39m[90mLZO_jll[39m
+[32m  ✓ [39m[90mOpus_jll[39m
+[32m  ✓ [39m[90mLLVMExtra_jll[39m
+[32m  ✓ [39m[90mEarCut_jll[39m
+[32m  ✓ [39m[90mXorg_libpthread_stubs_jll[39m
+[32m  ✓ [39m[90mJuno[39m
+[32m  ✓ [39m[90mSortingAlgorithms[39m
+[32m  ✓ [39m[90mRandom123[39m
+[32m  ✓ [39m[90mNNlib[39m
+[32m  ✓ [39m[90mHDF5_jll[39m
+[32m  ✓ [39m[90mLibtiff_jll[39m
+[32m  ✓ [39mColors
+[32m  ✓ [39m[90mChainRules[39m
+[32m  ✓ [39m[90mXML2_jll[39m
+[32m  ✓ [39m[90mBlosc_jll[39m
+[32m  ✓ [39m[90mlibvorbis_jll[39m
+[32m  ✓ [39m[90mLibgcrypt_jll[39m
+[32m  ✓ [39m[90mFreeType2_jll[39m
+[32m  ✓ [39m[90mLLVM[39m
+[32m  ✓ [39m[90mSpecialFunctions[39m
+[32m  ✓ [39m[90mStatsBase[39m
+[32m  ✓ [39m[90mGettext_jll[39m
+[32m  ✓ [39m[90mWayland_jll[39m
+[32m  ✓ [39m[90mGeometryBasics[39m
+[32m  ✓ [39m[90mBlosc[39m
+[32m  ✓ [39m[90mlibass_jll[39m
+[32m  ✓ [39m[90mXSLT_jll[39m
+[32m  ✓ [39m[90mColorSchemes[39m
+[32m  ✓ [39m[90mDiffRules[39m
+[32m  ✓ [39m[90mFontconfig_jll[39m
+[32m  ✓ [39m[90mWayland_protocols_jll[39m
+[32m  ✓ [39m[90mGlib_jll[39m
+[32m  ✓ [39m[90mFFMPEG_jll[39m
+[32m  ✓ [39m[90mHDF5[39m
+[32m  ✓ [39m[90mXorg_libxcb_jll[39m
+[32m  ✓ [39m[90mGPUCompiler[39m
+[32m  ✓ [39m[90mFFMPEG[39m
+[32m  ✓ [39m[90mMAT[39m
+[32m  ✓ [39m[90mXorg_libX11_jll[39m
+[32m  ✓ [39m[90mForwardDiff[39m
+[32m  ✓ [39m[90mXorg_xcb_util_jll[39m
+[32m  ✓ [39m[90mPlotUtils[39m
+[32m  ✓ [39m[90mXorg_libxkbfile_jll[39m
+[32m  ✓ [39mMLDatasets
+[32m  ✓ [39m[90mXorg_libXext_jll[39m
+[32m  ✓ [39m[90mXorg_libXfixes_jll[39m
+[32m  ✓ [39m[90mXorg_libXrender_jll[39m
+[32m  ✓ [39m[90mXorg_xcb_util_image_jll[39m
+[32m  ✓ [39m[90mXorg_xcb_util_keysyms_jll[39m
+[32m  ✓ [39m[90mXorg_xcb_util_renderutil_jll[39m
+[32m  ✓ [39m[90mXorg_xcb_util_wm_jll[39m
+[32m  ✓ [39m[90mZygote[39m
+[32m  ✓ [39m[90mPlotThemes[39m
+[32m  ✓ [39m[90mXorg_xkbcomp_jll[39m
+[32m  ✓ [39m[90mRecipesPipeline[39m
+[32m  ✓ [39m[90mLibglvnd_jll[39m
+[32m  ✓ [39m[90mXorg_libXinerama_jll[39m
+[32m  ✓ [39m[90mXorg_libXi_jll[39m
+[32m  ✓ [39m[90mCairo_jll[39m
+[32m  ✓ [39m[90mXorg_libXrandr_jll[39m
+[32m  ✓ [39m[90mXorg_libXcursor_jll[39m
+[32m  ✓ [39m[90mXorg_xkeyboard_config_jll[39m
+[32m  ✓ [39m[90mGLFW_jll[39m
+[32m  ✓ [39m[90mxkbcommon_jll[39m
+[32m  ✓ [39m[90mQt5Base_jll[39m
+[32m  ✓ [39m[90mGR_jll[39m
+[32m  ✓ [39m[90mGR[39m
+[32m  ✓ [39m[90mCUDA[39m
+[32m  ✓ [39m[90mNNlibCUDA[39m
+[32m  ✓ [39mFlux
+[32m  ✓ [39mPlots
+  156 dependencies successfully precompiled in 150 seconds (17 already precompiled)
+�PlutoUI�]�[32m[1m   Installed[22m[39m LLVMExtra_jll ──────────────── v0.0.7+0
+[32m[1m   Installed[22m[39m LZO_jll ────────────────────── v2.10.1+0
+[32m[1m   Installed[22m[39m Fontconfig_jll ─────────────── v2.13.1+14
+[32m[1m   Installed[22m[39m Qt5Base_jll ────────────────── v5.15.3+0
+[32m[1m   Installed[22m[39m Adapt ──────────────────────── v3.3.1
+[32m[1m   Installed[22m[39m ExprTools ──────────────────── v0.1.6
+[32m[1m   Installed[22m[39m URIParser ──────────────────── v0.4.1
+[32m[1m   Installed[22m[39m PyCall ─────────────────────── v1.92.3
+[32m[1m   Installed[22m[39m EarCut_jll ─────────────────── v2.1.5+1
+[32m[1m   Installed[22m[39m Ogg_jll ────────────────────── v1.3.5+0
+[32m[1m   Installed[22m[39m Suppressor ─────────────────── v0.2.0
+[32m[1m   Installed[22m[39m PlotThemes ─────────────────── v2.0.1
+[32m[1m   Installed[22m[39m TimerOutputs ───────────────── v0.5.12
+[32m[1m   Installed[22m[39m IterTools ──────────────────── v1.3.0
+[32m[1m   Installed[22m[39m Requires ───────────────────── v1.1.3
+[32m[1m   Installed[22m[39m ForwardDiff ────────────────── v0.10.19
+[32m[1m   Installed[22m[39m Xorg_libXfixes_jll ─────────── v5.0.3+4
+[32m[1m   Installed[22m[39m x265_jll ───────────────────── v3.0.0+3
+[32m[1m   Installed[22m[39m Lz4_jll ────────────────────── v1.9.3+0
+[32m[1m   Installed[22m[39m XSLT_jll ───────────────────── v1.1.34+0
+[32m[1m   Installed[22m[39m PlotUtils ──────────────────── v1.0.11
+[32m[1m   Installed[22m[39m Conda ──────────────────────── v1.5.2
+[32m[1m   Installed[22m[39m Functors ───────────────────── v0.2.3
+[32m[1m   Installed[22m[39m StatsBase ──────────────────── v0.33.9
+[32m[1m   Installed[22m[39m libfdk_aac_jll ─────────────── v0.1.6+4
+[32m[1m   Installed[22m[39m Glib_jll ───────────────────── v2.68.3+0
+[32m[1m   Installed[22m[39m Blosc ──────────────────────── v0.7.0
+[32m[1m   Installed[22m[39m SortingAlgorithms ──────────── v1.0.1
+[32m[1m   Installed[22m[39m FillArrays ─────────────────── v0.12.1
+[32m[1m   Installed[22m[39m Preferences ────────────────── v1.2.2
+[32m[1m   Installed[22m[39m DataDeps ───────────────────── v0.7.7
+[32m[1m   Installed[22m[39m Plots ──────────────────────── v1.20.0
+[32m[1m   Installed[22m[39m Libmount_jll ───────────────── v2.35.0+0
+[32m[1m   Installed[22m[39m HDF5_jll ───────────────────── v1.12.0+1
+[32m[1m   Installed[22m[39m Gettext_jll ────────────────── v0.21.0+0
+[32m[1m   Installed[22m[39m Libglvnd_jll ───────────────── v1.3.0+3
+[32m[1m   Installed[22m[39m CEnum ──────────────────────── v0.4.1
+[32m[1m   Installed[22m[39m LaTeXStrings ───────────────── v1.2.1
+[32m[1m   Installed[22m[39m SpecialFunctions ───────────── v1.6.1
+[32m[1m   Installed[22m[39m GPUCompiler ────────────────── v0.12.8
+[32m[1m   Installed[22m[39m Libgpg_error_jll ───────────── v1.42.0+0
+[32m[1m   Installed[22m[39m Pixman_jll ─────────────────── v0.40.1+0
+[32m[1m   Installed[22m[39m FFMPEG ─────────────────────── v0.4.1
+[32m[1m   Installed[22m[39m StatsAPI ───────────────────── v1.0.0
+[32m[1m   Installed[22m[39m Xorg_xcb_util_jll ──────────── v0.4.0+1
+[32m[1m   Installed[22m[39m Missings ───────────────────── v1.0.0
+[32m[1m   Installed[22m[39m Bzip2_jll ──────────────────── v1.0.6+5
+[32m[1m   Installed[22m[39m Grisu ──────────────────────── v1.0.2
+[32m[1m   Installed[22m[39m Formatting ─────────────────── v0.4.2
+[32m[1m   Installed[22m[39m BinDeps ────────────────────── v1.0.2
+[32m[1m   Installed[22m[39m BufferedStreams ────────────── v1.0.0
+[32m[1m   Installed[22m[39m DocStringExtensions ────────── v0.8.5
+[32m[1m   Installed[22m[39m Xorg_libXdmcp_jll ──────────── v1.1.3+4
+[32m[1m   Installed[22m[39m GLFW_jll ───────────────────── v3.3.5+0
+[32m[1m   Installed[22m[39m Libuuid_jll ────────────────── v2.36.0+0
+[32m[1m   Installed[22m[39m Xorg_libX11_jll ────────────── v1.6.9+4
+[32m[1m   Installed[22m[39m Xorg_libXrandr_jll ─────────── v1.5.2+4
+[32m[1m   Installed[22m[39m NNlib ──────────────────────── v0.7.27
+[32m[1m   Installed[22m[39m XML2_jll ───────────────────── v2.9.12+0
+[32m[1m   Installed[22m[39m Showoff ────────────────────── v1.0.3
+[32m[1m   Installed[22m[39m AbstractTrees ──────────────── v0.3.4
+[32m[1m   Installed[22m[39m Juno ───────────────────────── v0.8.4
+[32m[1m   Installed[22m[39m ChainRulesCore ─────────────── v1.3.0
+[32m[1m   Installed[22m[39m MLDatasets ─────────────────── v0.5.9
+[32m[1m   Installed[22m[39m Cairo_jll ──────────────────── v1.16.0+6
+[32m[1m   Installed[22m[39m GR_jll ─────────────────────── v0.58.1+0
+[32m[1m   Installed[22m[39m Libgcrypt_jll ──────────────── v1.8.7+0
+[32m[1m   Installed[22m[39m BFloat16s ──────────────────── v0.1.0
+[32m[1m   Installed[22m[39m Latexify ───────────────────── v0.15.6
+[32m[1m   Installed[22m[39m x264_jll ───────────────────── v2020.7.14+2
+[32m[1m   Installed[22m[39m Xorg_libxkbfile_jll ────────── v1.1.0+4
+[32m[1m   Installed[22m[39m Xorg_xcb_util_keysyms_jll ──── v0.4.0+1
+[32m[1m   Installed[22m[39m DataStructures ─────────────── v0.18.10
+[32m[1m   Installed[22m[39m GPUArrays ──────────────────── v8.0.1
+[32m[1m   Installed[22m[39m Zygote ─────────────────────── v0.6.19
+[32m[1m   Installed[22m[39m OpenSSL_jll ────────────────── v1.1.10+0
+[32m[1m   Installed[22m[39m OpenSpecFun_jll ────────────── v0.5.5+0
+[32m[1m   Installed[22m[39m Zstd_jll ───────────────────── v1.5.0+0
+[32m[1m   Installed[22m[39m libass_jll ─────────────────── v0.14.0+4
+[32m[1m   Installed[22m[39m libvorbis_jll ──────────────── v1.3.7+0
+[32m[1m   Installed[22m[39m FreeType2_jll ──────────────── v2.10.1+5
+[32m[1m   Installed[22m[39m Xorg_libXau_jll ────────────── v1.0.9+4
+[32m[1m   Installed[22m[39m Wayland_jll ────────────────── v1.19.0+0
+[32m[1m   Installed[22m[39m FriBidi_jll ────────────────── v1.0.10+0
+[32m[1m   Installed[22m[39m Xorg_libXinerama_jll ───────── v1.1.4+4
+[32m[1m   Installed[22m[39m MacroTools ─────────────────── v0.5.7
+[32m[1m   Installed[22m[39m ZipFile ────────────────────── v0.9.3
+[32m[1m   Installed[22m[39m Colors ─────────────────────── v0.12.8
+[32m[1m   Installed[22m[39m Libffi_jll ─────────────────── v3.2.2+0
+[32m[1m   Installed[22m[39m FFMPEG_jll ─────────────────── v4.3.1+4
+[32m[1m   Installed[22m[39m GZip ───────────────────────── v0.5.1
+[32m[1m   Installed[22m[39m ColorSchemes ───────────────── v3.14.0
+[32m[1m   Installed[22m[39m GR ─────────────────────────── v0.58.1
+[32m[1m   Installed[22m[39m RecipesPipeline ────────────── v0.3.4
+[32m[1m   Installed[22m[39m VersionParsing ─────────────── v1.2.0
+[32m[1m   Installed[22m[39m Libtiff_jll ────────────────── v4.3.0+0
+[32m[1m   Installed[22m[39m Compat ─────────────────────── v3.32.0
+[32m[1m   Installed[22m[39m DiffResults ────────────────── v1.0.3
+[32m[1m   Installed[22m[39m LogExpFunctions ────────────── v0.3.0
+[32m[1m   Installed[22m[39m ColorTypes ─────────────────── v0.11.0
+[32m[1m   Installed[22m[39m NaNMath ────────────────────── v0.3.5
+[32m[1m   Installed[22m[39m MAT ────────────────────────── v0.10.1
+[32m[1m   Installed[22m[39m Xorg_xcb_util_image_jll ────── v0.4.0+1
+[32m[1m   Installed[22m[39m RandomNumbers ──────────────── v1.5.3
+[32m[1m   Installed[22m[39m Media ──────────────────────── v0.5.0
+[32m[1m   Installed[22m[39m Blosc_jll ──────────────────── v1.21.0+0
+[32m[1m   Installed[22m[39m Xorg_xcb_util_renderutil_jll ─ v0.3.9+1
+[32m[1m   Installed[22m[39m CommonSubexpressions ───────── v0.3.0
+[32m[1m   Installed[22m[39m IRTools ────────────────────── v0.4.3
+[32m[1m   Installed[22m[39m RecipesBase ────────────────── v1.1.1
+[32m[1m   Installed[22m[39m GeometryBasics ─────────────── v0.4.1
+[32m[1m   Installed[22m[39m AbstractFFTs ───────────────── v1.0.1
+[32m[1m   Installed[22m[39m HDF5 ───────────────────────── v0.15.6
+[32m[1m   Installed[22m[39m Wayland_protocols_jll ──────── v1.18.0+4
+[32m[1m   Installed[22m[39m Xorg_libpthread_stubs_jll ──── v0.1.0+3
+[32m[1m   Installed[22m[39m CodecZlib ──────────────────── v0.7.0
+[32m[1m   Installed[22m[39m PCRE_jll ───────────────────── v8.44.0+0
+[32m[1m   Installed[22m[39m Opus_jll ───────────────────── v1.3.2+0
+[32m[1m   Installed[22m[39m Xorg_xcb_util_wm_jll ───────── v0.4.1+1
+[32m[1m   Installed[22m[39m StructArrays ───────────────── v0.6.0
+[32m[1m   Installed[22m[39m JLLWrappers ────────────────── v1.3.0
+[32m[1m   Installed[22m[39m JpegTurbo_jll ──────────────── v2.1.0+0
+[32m[1m   Installed[22m[39m Measures ───────────────────── v0.3.1
+[32m[1m   Installed[22m[39m Scratch ────────────────────── v1.1.0
+[32m[1m   Installed[22m[39m ArrayInterface ─────────────── v3.1.23
+[32m[1m   Installed[22m[39m BinaryProvider ─────────────── v0.5.10
+[32m[1m   Installed[22m[39m ChainRules ─────────────────── v1.5.1
+[32m[1m   Installed[22m[39m Contour ────────────────────── v0.5.7
+[32m[1m   Installed[22m[39m Xorg_libxcb_jll ────────────── v1.13.0+3
+[32m[1m   Installed[22m[39m Xorg_libXext_jll ───────────── v1.3.4+4
+[32m[1m   Installed[22m[39m LibVPX_jll ─────────────────── v1.10.0+0
+[32m[1m   Installed[22m[39m Xorg_xkbcomp_jll ───────────── v1.4.2+4
+[32m[1m   Installed[22m[39m Xorg_libXcursor_jll ────────── v1.2.0+4
+[32m[1m   Installed[22m[39m StaticArrays ───────────────── v1.2.12
+[32m[1m   Installed[22m[39m LLVM ───────────────────────── v4.2.0
+[32m[1m   Installed[22m[39m Xorg_libXi_jll ─────────────── v1.7.10+4
+[32m[1m   Installed[22m[39m CUDA ───────────────────────── v3.3.5
+[32m[1m   Installed[22m[39m Xorg_xkeyboard_config_jll ──── v2.27.0+4
+[32m[1m   Installed[22m[39m ZygoteRules ────────────────── v0.2.1
+[32m[1m   Installed[22m[39m FixedPointNumbers ──────────── v0.8.4
+[32m[1m   Installed[22m[39m IfElse ─────────────────────── v0.1.0
+[32m[1m   Installed[22m[39m Static ─────────────────────── v0.3.0
+[32m[1m   Installed[22m[39m Random123 ──────────────────── v1.4.2
+[32m[1m   Installed[22m[39m Xorg_xtrans_jll ────────────── v1.4.0+3
+[32m[1m   Installed[22m[39m Expat_jll ──────────────────── v2.2.10+0
+[32m[1m   Installed[22m[39m Xorg_libXrender_jll ────────── v0.9.10+4
+[32m[1m   Installed[22m[39m TranscodingStreams ─────────── v0.9.6
+[32m[1m   Installed[22m[39m PlutoUI ────────────────────── v0.7.9
+[32m[1m   Installed[22m[39m DiffRules ──────────────────── v1.2.1
+[32m[1m   Installed[22m[39m NNlibCUDA ──────────────────── v0.1.7
+[32m[1m   Installed[22m[39m Libiconv_jll ───────────────── v1.16.1+1
+[32m[1m   Installed[22m[39m Flux ───────────────────────── v0.12.6
+[32m[1m   Installed[22m[39m libpng_jll ─────────────────── v1.6.38+0
+[32m[1m   Installed[22m[39m LAME_jll ───────────────────── v3.100.1+0
+[32m[1m   Installed[22m[39m Reexport ───────────────────── v1.1.0
+[32m[1m   Installed[22m[39m xkbcommon_jll ──────────────── v0.9.1+5
+[32m[1m   Installed[22m[39m IrrationalConstants ────────── v0.1.0
+[32m[1m  No Changes[22m[39m to `/tmp/jl_pa7U80/Project.toml`
+[32m[1m  No Changes[22m[39m to `/tmp/jl_pa7U80/Manifest.toml`
+[32m[1m    Building[22m[39m Conda ────→ `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/299304989a5e6473d985212c28928899c74e9421/build.log`
+[32m[1m    Building[22m[39m PyCall ───→ `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/169bb8ea6b1b143c5cf57df6d34d022a7b60c6db/build.log`
+[32m[1m    Building[22m[39m DataDeps ─→ `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/4f0e41ff461d42cfc62ff0de4f1cd44c6e6b3771/build.log`
+[32m[1m    Building[22m[39m GR ───────→ `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/182da592436e287758ded5be6e32c406de3a2e47/build.log`
+[32m[1m    Building[22m[39m HDF5 ─────→ `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/83173193dc242ce4b037f0263a7cc45afb5a0b85/build.log`
+[32m[1m    Building[22m[39m Random123 → `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/0e8b146557ad1c6deb1367655e052276690e71a3/build.log`
+[32m[1mPrecompiling[22m[39m project...
+[32m  ✓ [39m[90mIfElse[39m
+[32m  ✓ [39m[90mGZip[39m
+[32m  ✓ [39m[90mPreferences[39m
+[32m  ✓ [39m[90mBFloat16s[39m
+[32m  ✓ [39m[90mMacroTools[39m
+[32m  ✓ [39m[90mGrisu[39m
+[32m  ✓ [39m[90mReexport[39m
+[32m  ✓ [39m[90mURIParser[39m
+[32m  ✓ [39m[90mRecipesBase[39m
+[32m  ✓ [39m[90mAbstractTrees[39m
+[32m  ✓ [39m[90mFixedPointNumbers[39m
+[32m  ✓ [39m[90mLaTeXStrings[39m
+[32m  ✓ [39m[90mStatsAPI[39m
+[32m  ✓ [39m[90mFillArrays[39m
+[32m  ✓ [39m[90mCompat[39m
+[32m  ✓ [39m[90mNaNMath[39m
+[32m  ✓ [39m[90mCEnum[39m
+[32m  ✓ [39m[90mAdapt[39m
+[32m  ✓ [39m[90mFormatting[39m
+[32m  ✓ [39m[90mIterTools[39m
+[32m  ✓ [39m[90mTranscodingStreams[39m
+[32m  ✓ [39m[90mStaticArrays[39m
+[32m  ✓ [39m[90mExprTools[39m
+[32m  ✓ [39m[90mBinaryProvider[39m
+[32m  ✓ [39m[90mCompilerSupportLibraries_jll[39m
+[32m  ✓ [39m[90mAbstractFFTs[39m
+[32m  ✓ [39m[90mDocStringExtensions[39m
+[32m  ✓ [39m[90mSuppressor[39m
+[32m  ✓ [39m[90mMeasures[39m
+[32m  ✓ [39m[90mRequires[39m
+[32m  ✓ [39m[90mScratch[39m
+[32m  ✓ [39m[90mIrrationalConstants[39m
+[32m  ✓ [39m[90mZipFile[39m
+[32m  ✓ [39m[90mMissings[39m
+[32m  ✓ [39m[90mStatic[39m
+[32m  ✓ [39m[90mJLLWrappers[39m
+[32m  ✓ [39m[90mCommonSubexpressions[39m
+[32m  ✓ [39m[90mMedia[39m
+[32m  ✓ [39m[90mFunctors[39m
+[32m  ✓ [39m[90mZygoteRules[39m
+[32m  ✓ [39m[90mShowoff[39m
+[32m  ✓ [39m[90mIRTools[39m
+[32m  ✓ [39m[90mBinDeps[39m
+[32m  ✓ [39m[90mChainRulesCore[39m
+[32m  ✓ [39m[90mDataStructures[39m
+[32m  ✓ [39m[90mBufferedStreams[39m
+[32m  ✓ [39m[90mPyCall[39m
+[32m  ✓ [39m[90mCodecZlib[39m
+[32m  ✓ [39m[90mStructArrays[39m
+[32m  ✓ [39m[90mGPUArrays[39m
+[32m  ✓ [39m[90mDiffResults[39m
+[32m  ✓ [39m[90mContour[39m
+[32m  ✓ [39m[90mTimerOutputs[39m
+[32m  ✓ [39m[90mDataDeps[39m
+[32m  ✓ [39m[90mRandomNumbers[39m
+[32m  ✓ [39m[90mColorTypes[39m
+[32m  ✓ [39m[90mLogExpFunctions[39m
+[32m  ✓ [39m[90mLatexify[39m
+[32m  ✓ [39mPlutoUI
+[32m  ✓ [39m[90mArrayInterface[39m
+[32m  ✓ [39m[90mFriBidi_jll[39m
+[32m  ✓ [39m[90mLibuuid_jll[39m
+[32m  ✓ [39m[90mlibfdk_aac_jll[39m
+[32m  ✓ [39m[90mOpenSSL_jll[39m
+[32m  ✓ [39m[90mZstd_jll[39m
+[32m  ✓ [39m[90mPixman_jll[39m
+[32m  ✓ [39m[90mJpegTurbo_jll[39m
+[32m  ✓ [39m[90mExpat_jll[39m
+[32m  ✓ [39m[90mLibmount_jll[39m
+[32m  ✓ [39m[90mLibiconv_jll[39m
+[32m  ✓ [39m[90mXorg_libXdmcp_jll[39m
+[32m  ✓ [39m[90mlibpng_jll[39m
+[32m  ✓ [39m[90mLz4_jll[39m
+[32m  ✓ [39m[90mOgg_jll[39m
+[32m  ✓ [39m[90mXorg_libXau_jll[39m
+[32m  ✓ [39m[90mx264_jll[39m
+[32m  ✓ [39m[90mLibVPX_jll[39m
+[32m  ✓ [39m[90mXorg_xtrans_jll[39m
+[32m  ✓ [39m[90mLAME_jll[39m
+[32m  ✓ [39m[90mLibffi_jll[39m
+[32m  ✓ [39m[90mPCRE_jll[39m
+[32m  ✓ [39m[90mLibgpg_error_jll[39m
+[32m  ✓ [39m[90mx265_jll[39m
+[32m  ✓ [39m[90mBzip2_jll[39m
+[32m  ✓ [39m[90mOpenSpecFun_jll[39m
+[32m  ✓ [39m[90mLZO_jll[39m
+[32m  ✓ [39m[90mOpus_jll[39m
+[32m  ✓ [39m[90mLLVMExtra_jll[39m
+[32m  ✓ [39m[90mEarCut_jll[39m
+[32m  ✓ [39m[90mXorg_libpthread_stubs_jll[39m
+[32m  ✓ [39m[90mJuno[39m
+[32m  ✓ [39m[90mSortingAlgorithms[39m
+[32m  ✓ [39m[90mRandom123[39m
+[32m  ✓ [39m[90mNNlib[39m
+[32m  ✓ [39m[90mHDF5_jll[39m
+[32m  ✓ [39m[90mLibtiff_jll[39m
+[32m  ✓ [39mColors
+[32m  ✓ [39m[90mChainRules[39m
+[32m  ✓ [39m[90mXML2_jll[39m
+[32m  ✓ [39m[90mBlosc_jll[39m
+[32m  ✓ [39m[90mlibvorbis_jll[39m
+[32m  ✓ [39m[90mLibgcrypt_jll[39m
+[32m  ✓ [39m[90mFreeType2_jll[39m
+[32m  ✓ [39m[90mLLVM[39m
+[32m  ✓ [39m[90mSpecialFunctions[39m
+[32m  ✓ [39m[90mStatsBase[39m
+[32m  ✓ [39m[90mGettext_jll[39m
+[32m  ✓ [39m[90mWayland_jll[39m
+[32m  ✓ [39m[90mGeometryBasics[39m
+[32m  ✓ [39m[90mBlosc[39m
+[32m  ✓ [39m[90mlibass_jll[39m
+[32m  ✓ [39m[90mXSLT_jll[39m
+[32m  ✓ [39m[90mColorSchemes[39m
+[32m  ✓ [39m[90mDiffRules[39m
+[32m  ✓ [39m[90mFontconfig_jll[39m
+[32m  ✓ [39m[90mWayland_protocols_jll[39m
+[32m  ✓ [39m[90mGlib_jll[39m
+[32m  ✓ [39m[90mFFMPEG_jll[39m
+[32m  ✓ [39m[90mHDF5[39m
+[32m  ✓ [39m[90mXorg_libxcb_jll[39m
+[32m  ✓ [39m[90mGPUCompiler[39m
+[32m  ✓ [39m[90mFFMPEG[39m
+[32m  ✓ [39m[90mMAT[39m
+[32m  ✓ [39m[90mXorg_libX11_jll[39m
+[32m  ✓ [39m[90mForwardDiff[39m
+[32m  ✓ [39m[90mXorg_xcb_util_jll[39m
+[32m  ✓ [39m[90mPlotUtils[39m
+[32m  ✓ [39m[90mXorg_libxkbfile_jll[39m
+[32m  ✓ [39mMLDatasets
+[32m  ✓ [39m[90mXorg_libXext_jll[39m
+[32m  ✓ [39m[90mXorg_libXfixes_jll[39m
+[32m  ✓ [39m[90mXorg_libXrender_jll[39m
+[32m  ✓ [39m[90mXorg_xcb_util_image_jll[39m
+[32m  ✓ [39m[90mXorg_xcb_util_keysyms_jll[39m
+[32m  ✓ [39m[90mXorg_xcb_util_renderutil_jll[39m
+[32m  ✓ [39m[90mXorg_xcb_util_wm_jll[39m
+[32m  ✓ [39m[90mZygote[39m
+[32m  ✓ [39m[90mPlotThemes[39m
+[32m  ✓ [39m[90mXorg_xkbcomp_jll[39m
+[32m  ✓ [39m[90mRecipesPipeline[39m
+[32m  ✓ [39m[90mLibglvnd_jll[39m
+[32m  ✓ [39m[90mXorg_libXinerama_jll[39m
+[32m  ✓ [39m[90mXorg_libXi_jll[39m
+[32m  ✓ [39m[90mCairo_jll[39m
+[32m  ✓ [39m[90mXorg_libXrandr_jll[39m
+[32m  ✓ [39m[90mXorg_libXcursor_jll[39m
+[32m  ✓ [39m[90mXorg_xkeyboard_config_jll[39m
+[32m  ✓ [39m[90mGLFW_jll[39m
+[32m  ✓ [39m[90mxkbcommon_jll[39m
+[32m  ✓ [39m[90mQt5Base_jll[39m
+[32m  ✓ [39m[90mGR_jll[39m
+[32m  ✓ [39m[90mGR[39m
+[32m  ✓ [39m[90mCUDA[39m
+[32m  ✓ [39m[90mNNlibCUDA[39m
+[32m  ✓ [39mFlux
+[32m  ✓ [39mPlots
+  156 dependencies successfully precompiled in 150 seconds (17 already precompiled)
+�Plots�]�[32m[1m   Installed[22m[39m LLVMExtra_jll ──────────────── v0.0.7+0
+[32m[1m   Installed[22m[39m LZO_jll ────────────────────── v2.10.1+0
+[32m[1m   Installed[22m[39m Fontconfig_jll ─────────────── v2.13.1+14
+[32m[1m   Installed[22m[39m Qt5Base_jll ────────────────── v5.15.3+0
+[32m[1m   Installed[22m[39m Adapt ──────────────────────── v3.3.1
+[32m[1m   Installed[22m[39m ExprTools ──────────────────── v0.1.6
+[32m[1m   Installed[22m[39m URIParser ──────────────────── v0.4.1
+[32m[1m   Installed[22m[39m PyCall ─────────────────────── v1.92.3
+[32m[1m   Installed[22m[39m EarCut_jll ─────────────────── v2.1.5+1
+[32m[1m   Installed[22m[39m Ogg_jll ────────────────────── v1.3.5+0
+[32m[1m   Installed[22m[39m Suppressor ─────────────────── v0.2.0
+[32m[1m   Installed[22m[39m PlotThemes ─────────────────── v2.0.1
+[32m[1m   Installed[22m[39m TimerOutputs ───────────────── v0.5.12
+[32m[1m   Installed[22m[39m IterTools ──────────────────── v1.3.0
+[32m[1m   Installed[22m[39m Requires ───────────────────── v1.1.3
+[32m[1m   Installed[22m[39m ForwardDiff ────────────────── v0.10.19
+[32m[1m   Installed[22m[39m Xorg_libXfixes_jll ─────────── v5.0.3+4
+[32m[1m   Installed[22m[39m x265_jll ───────────────────── v3.0.0+3
+[32m[1m   Installed[22m[39m Lz4_jll ────────────────────── v1.9.3+0
+[32m[1m   Installed[22m[39m XSLT_jll ───────────────────── v1.1.34+0
+[32m[1m   Installed[22m[39m PlotUtils ──────────────────── v1.0.11
+[32m[1m   Installed[22m[39m Conda ──────────────────────── v1.5.2
+[32m[1m   Installed[22m[39m Functors ───────────────────── v0.2.3
+[32m[1m   Installed[22m[39m StatsBase ──────────────────── v0.33.9
+[32m[1m   Installed[22m[39m libfdk_aac_jll ─────────────── v0.1.6+4
+[32m[1m   Installed[22m[39m Glib_jll ───────────────────── v2.68.3+0
+[32m[1m   Installed[22m[39m Blosc ──────────────────────── v0.7.0
+[32m[1m   Installed[22m[39m SortingAlgorithms ──────────── v1.0.1
+[32m[1m   Installed[22m[39m FillArrays ─────────────────── v0.12.1
+[32m[1m   Installed[22m[39m Preferences ────────────────── v1.2.2
+[32m[1m   Installed[22m[39m DataDeps ───────────────────── v0.7.7
+[32m[1m   Installed[22m[39m Plots ──────────────────────── v1.20.0
+[32m[1m   Installed[22m[39m Libmount_jll ───────────────── v2.35.0+0
+[32m[1m   Installed[22m[39m HDF5_jll ───────────────────── v1.12.0+1
+[32m[1m   Installed[22m[39m Gettext_jll ────────────────── v0.21.0+0
+[32m[1m   Installed[22m[39m Libglvnd_jll ───────────────── v1.3.0+3
+[32m[1m   Installed[22m[39m CEnum ──────────────────────── v0.4.1
+[32m[1m   Installed[22m[39m LaTeXStrings ───────────────── v1.2.1
+[32m[1m   Installed[22m[39m SpecialFunctions ───────────── v1.6.1
+[32m[1m   Installed[22m[39m GPUCompiler ────────────────── v0.12.8
+[32m[1m   Installed[22m[39m Libgpg_error_jll ───────────── v1.42.0+0
+[32m[1m   Installed[22m[39m Pixman_jll ─────────────────── v0.40.1+0
+[32m[1m   Installed[22m[39m FFMPEG ─────────────────────── v0.4.1
+[32m[1m   Installed[22m[39m StatsAPI ───────────────────── v1.0.0
+[32m[1m   Installed[22m[39m Xorg_xcb_util_jll ──────────── v0.4.0+1
+[32m[1m   Installed[22m[39m Missings ───────────────────── v1.0.0
+[32m[1m   Installed[22m[39m Bzip2_jll ──────────────────── v1.0.6+5
+[32m[1m   Installed[22m[39m Grisu ──────────────────────── v1.0.2
+[32m[1m   Installed[22m[39m Formatting ─────────────────── v0.4.2
+[32m[1m   Installed[22m[39m BinDeps ────────────────────── v1.0.2
+[32m[1m   Installed[22m[39m BufferedStreams ────────────── v1.0.0
+[32m[1m   Installed[22m[39m DocStringExtensions ────────── v0.8.5
+[32m[1m   Installed[22m[39m Xorg_libXdmcp_jll ──────────── v1.1.3+4
+[32m[1m   Installed[22m[39m GLFW_jll ───────────────────── v3.3.5+0
+[32m[1m   Installed[22m[39m Libuuid_jll ────────────────── v2.36.0+0
+[32m[1m   Installed[22m[39m Xorg_libX11_jll ────────────── v1.6.9+4
+[32m[1m   Installed[22m[39m Xorg_libXrandr_jll ─────────── v1.5.2+4
+[32m[1m   Installed[22m[39m NNlib ──────────────────────── v0.7.27
+[32m[1m   Installed[22m[39m XML2_jll ───────────────────── v2.9.12+0
+[32m[1m   Installed[22m[39m Showoff ────────────────────── v1.0.3
+[32m[1m   Installed[22m[39m AbstractTrees ──────────────── v0.3.4
+[32m[1m   Installed[22m[39m Juno ───────────────────────── v0.8.4
+[32m[1m   Installed[22m[39m ChainRulesCore ─────────────── v1.3.0
+[32m[1m   Installed[22m[39m MLDatasets ─────────────────── v0.5.9
+[32m[1m   Installed[22m[39m Cairo_jll ──────────────────── v1.16.0+6
+[32m[1m   Installed[22m[39m GR_jll ─────────────────────── v0.58.1+0
+[32m[1m   Installed[22m[39m Libgcrypt_jll ──────────────── v1.8.7+0
+[32m[1m   Installed[22m[39m BFloat16s ──────────────────── v0.1.0
+[32m[1m   Installed[22m[39m Latexify ───────────────────── v0.15.6
+[32m[1m   Installed[22m[39m x264_jll ───────────────────── v2020.7.14+2
+[32m[1m   Installed[22m[39m Xorg_libxkbfile_jll ────────── v1.1.0+4
+[32m[1m   Installed[22m[39m Xorg_xcb_util_keysyms_jll ──── v0.4.0+1
+[32m[1m   Installed[22m[39m DataStructures ─────────────── v0.18.10
+[32m[1m   Installed[22m[39m GPUArrays ──────────────────── v8.0.1
+[32m[1m   Installed[22m[39m Zygote ─────────────────────── v0.6.19
+[32m[1m   Installed[22m[39m OpenSSL_jll ────────────────── v1.1.10+0
+[32m[1m   Installed[22m[39m OpenSpecFun_jll ────────────── v0.5.5+0
+[32m[1m   Installed[22m[39m Zstd_jll ───────────────────── v1.5.0+0
+[32m[1m   Installed[22m[39m libass_jll ─────────────────── v0.14.0+4
+[32m[1m   Installed[22m[39m libvorbis_jll ──────────────── v1.3.7+0
+[32m[1m   Installed[22m[39m FreeType2_jll ──────────────── v2.10.1+5
+[32m[1m   Installed[22m[39m Xorg_libXau_jll ────────────── v1.0.9+4
+[32m[1m   Installed[22m[39m Wayland_jll ────────────────── v1.19.0+0
+[32m[1m   Installed[22m[39m FriBidi_jll ────────────────── v1.0.10+0
+[32m[1m   Installed[22m[39m Xorg_libXinerama_jll ───────── v1.1.4+4
+[32m[1m   Installed[22m[39m MacroTools ─────────────────── v0.5.7
+[32m[1m   Installed[22m[39m ZipFile ────────────────────── v0.9.3
+[32m[1m   Installed[22m[39m Colors ─────────────────────── v0.12.8
+[32m[1m   Installed[22m[39m Libffi_jll ─────────────────── v3.2.2+0
+[32m[1m   Installed[22m[39m FFMPEG_jll ─────────────────── v4.3.1+4
+[32m[1m   Installed[22m[39m GZip ───────────────────────── v0.5.1
+[32m[1m   Installed[22m[39m ColorSchemes ───────────────── v3.14.0
+[32m[1m   Installed[22m[39m GR ─────────────────────────── v0.58.1
+[32m[1m   Installed[22m[39m RecipesPipeline ────────────── v0.3.4
+[32m[1m   Installed[22m[39m VersionParsing ─────────────── v1.2.0
+[32m[1m   Installed[22m[39m Libtiff_jll ────────────────── v4.3.0+0
+[32m[1m   Installed[22m[39m Compat ─────────────────────── v3.32.0
+[32m[1m   Installed[22m[39m DiffResults ────────────────── v1.0.3
+[32m[1m   Installed[22m[39m LogExpFunctions ────────────── v0.3.0
+[32m[1m   Installed[22m[39m ColorTypes ─────────────────── v0.11.0
+[32m[1m   Installed[22m[39m NaNMath ────────────────────── v0.3.5
+[32m[1m   Installed[22m[39m MAT ────────────────────────── v0.10.1
+[32m[1m   Installed[22m[39m Xorg_xcb_util_image_jll ────── v0.4.0+1
+[32m[1m   Installed[22m[39m RandomNumbers ──────────────── v1.5.3
+[32m[1m   Installed[22m[39m Media ──────────────────────── v0.5.0
+[32m[1m   Installed[22m[39m Blosc_jll ──────────────────── v1.21.0+0
+[32m[1m   Installed[22m[39m Xorg_xcb_util_renderutil_jll ─ v0.3.9+1
+[32m[1m   Installed[22m[39m CommonSubexpressions ───────── v0.3.0
+[32m[1m   Installed[22m[39m IRTools ────────────────────── v0.4.3
+[32m[1m   Installed[22m[39m RecipesBase ────────────────── v1.1.1
+[32m[1m   Installed[22m[39m GeometryBasics ─────────────── v0.4.1
+[32m[1m   Installed[22m[39m AbstractFFTs ───────────────── v1.0.1
+[32m[1m   Installed[22m[39m HDF5 ───────────────────────── v0.15.6
+[32m[1m   Installed[22m[39m Wayland_protocols_jll ──────── v1.18.0+4
+[32m[1m   Installed[22m[39m Xorg_libpthread_stubs_jll ──── v0.1.0+3
+[32m[1m   Installed[22m[39m CodecZlib ──────────────────── v0.7.0
+[32m[1m   Installed[22m[39m PCRE_jll ───────────────────── v8.44.0+0
+[32m[1m   Installed[22m[39m Opus_jll ───────────────────── v1.3.2+0
+[32m[1m   Installed[22m[39m Xorg_xcb_util_wm_jll ───────── v0.4.1+1
+[32m[1m   Installed[22m[39m StructArrays ───────────────── v0.6.0
+[32m[1m   Installed[22m[39m JLLWrappers ────────────────── v1.3.0
+[32m[1m   Installed[22m[39m JpegTurbo_jll ──────────────── v2.1.0+0
+[32m[1m   Installed[22m[39m Measures ───────────────────── v0.3.1
+[32m[1m   Installed[22m[39m Scratch ────────────────────── v1.1.0
+[32m[1m   Installed[22m[39m ArrayInterface ─────────────── v3.1.23
+[32m[1m   Installed[22m[39m BinaryProvider ─────────────── v0.5.10
+[32m[1m   Installed[22m[39m ChainRules ─────────────────── v1.5.1
+[32m[1m   Installed[22m[39m Contour ────────────────────── v0.5.7
+[32m[1m   Installed[22m[39m Xorg_libxcb_jll ────────────── v1.13.0+3
+[32m[1m   Installed[22m[39m Xorg_libXext_jll ───────────── v1.3.4+4
+[32m[1m   Installed[22m[39m LibVPX_jll ─────────────────── v1.10.0+0
+[32m[1m   Installed[22m[39m Xorg_xkbcomp_jll ───────────── v1.4.2+4
+[32m[1m   Installed[22m[39m Xorg_libXcursor_jll ────────── v1.2.0+4
+[32m[1m   Installed[22m[39m StaticArrays ───────────────── v1.2.12
+[32m[1m   Installed[22m[39m LLVM ───────────────────────── v4.2.0
+[32m[1m   Installed[22m[39m Xorg_libXi_jll ─────────────── v1.7.10+4
+[32m[1m   Installed[22m[39m CUDA ───────────────────────── v3.3.5
+[32m[1m   Installed[22m[39m Xorg_xkeyboard_config_jll ──── v2.27.0+4
+[32m[1m   Installed[22m[39m ZygoteRules ────────────────── v0.2.1
+[32m[1m   Installed[22m[39m FixedPointNumbers ──────────── v0.8.4
+[32m[1m   Installed[22m[39m IfElse ─────────────────────── v0.1.0
+[32m[1m   Installed[22m[39m Static ─────────────────────── v0.3.0
+[32m[1m   Installed[22m[39m Random123 ──────────────────── v1.4.2
+[32m[1m   Installed[22m[39m Xorg_xtrans_jll ────────────── v1.4.0+3
+[32m[1m   Installed[22m[39m Expat_jll ──────────────────── v2.2.10+0
+[32m[1m   Installed[22m[39m Xorg_libXrender_jll ────────── v0.9.10+4
+[32m[1m   Installed[22m[39m TranscodingStreams ─────────── v0.9.6
+[32m[1m   Installed[22m[39m PlutoUI ────────────────────── v0.7.9
+[32m[1m   Installed[22m[39m DiffRules ──────────────────── v1.2.1
+[32m[1m   Installed[22m[39m NNlibCUDA ──────────────────── v0.1.7
+[32m[1m   Installed[22m[39m Libiconv_jll ───────────────── v1.16.1+1
+[32m[1m   Installed[22m[39m Flux ───────────────────────── v0.12.6
+[32m[1m   Installed[22m[39m libpng_jll ─────────────────── v1.6.38+0
+[32m[1m   Installed[22m[39m LAME_jll ───────────────────── v3.100.1+0
+[32m[1m   Installed[22m[39m Reexport ───────────────────── v1.1.0
+[32m[1m   Installed[22m[39m xkbcommon_jll ──────────────── v0.9.1+5
+[32m[1m   Installed[22m[39m IrrationalConstants ────────── v0.1.0
+[32m[1m  No Changes[22m[39m to `/tmp/jl_pa7U80/Project.toml`
+[32m[1m  No Changes[22m[39m to `/tmp/jl_pa7U80/Manifest.toml`
+[32m[1m    Building[22m[39m Conda ────→ `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/299304989a5e6473d985212c28928899c74e9421/build.log`
+[32m[1m    Building[22m[39m PyCall ───→ `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/169bb8ea6b1b143c5cf57df6d34d022a7b60c6db/build.log`
+[32m[1m    Building[22m[39m DataDeps ─→ `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/4f0e41ff461d42cfc62ff0de4f1cd44c6e6b3771/build.log`
+[32m[1m    Building[22m[39m GR ───────→ `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/182da592436e287758ded5be6e32c406de3a2e47/build.log`
+[32m[1m    Building[22m[39m HDF5 ─────→ `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/83173193dc242ce4b037f0263a7cc45afb5a0b85/build.log`
+[32m[1m    Building[22m[39m Random123 → `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/0e8b146557ad1c6deb1367655e052276690e71a3/build.log`
+[32m[1mPrecompiling[22m[39m project...
+[32m  ✓ [39m[90mIfElse[39m
+[32m  ✓ [39m[90mGZip[39m
+[32m  ✓ [39m[90mPreferences[39m
+[32m  ✓ [39m[90mBFloat16s[39m
+[32m  ✓ [39m[90mMacroTools[39m
+[32m  ✓ [39m[90mGrisu[39m
+[32m  ✓ [39m[90mReexport[39m
+[32m  ✓ [39m[90mURIParser[39m
+[32m  ✓ [39m[90mRecipesBase[39m
+[32m  ✓ [39m[90mAbstractTrees[39m
+[32m  ✓ [39m[90mFixedPointNumbers[39m
+[32m  ✓ [39m[90mLaTeXStrings[39m
+[32m  ✓ [39m[90mStatsAPI[39m
+[32m  ✓ [39m[90mFillArrays[39m
+[32m  ✓ [39m[90mCompat[39m
+[32m  ✓ [39m[90mNaNMath[39m
+[32m  ✓ [39m[90mCEnum[39m
+[32m  ✓ [39m[90mAdapt[39m
+[32m  ✓ [39m[90mFormatting[39m
+[32m  ✓ [39m[90mIterTools[39m
+[32m  ✓ [39m[90mTranscodingStreams[39m
+[32m  ✓ [39m[90mStaticArrays[39m
+[32m  ✓ [39m[90mExprTools[39m
+[32m  ✓ [39m[90mBinaryProvider[39m
+[32m  ✓ [39m[90mCompilerSupportLibraries_jll[39m
+[32m  ✓ [39m[90mAbstractFFTs[39m
+[32m  ✓ [39m[90mDocStringExtensions[39m
+[32m  ✓ [39m[90mSuppressor[39m
+[32m  ✓ [39m[90mMeasures[39m
+[32m  ✓ [39m[90mRequires[39m
+[32m  ✓ [39m[90mScratch[39m
+[32m  ✓ [39m[90mIrrationalConstants[39m
+[32m  ✓ [39m[90mZipFile[39m
+[32m  ✓ [39m[90mMissings[39m
+[32m  ✓ [39m[90mStatic[39m
+[32m  ✓ [39m[90mJLLWrappers[39m
+[32m  ✓ [39m[90mCommonSubexpressions[39m
+[32m  ✓ [39m[90mMedia[39m
+[32m  ✓ [39m[90mFunctors[39m
+[32m  ✓ [39m[90mZygoteRules[39m
+[32m  ✓ [39m[90mShowoff[39m
+[32m  ✓ [39m[90mIRTools[39m
+[32m  ✓ [39m[90mBinDeps[39m
+[32m  ✓ [39m[90mChainRulesCore[39m
+[32m  ✓ [39m[90mDataStructures[39m
+[32m  ✓ [39m[90mBufferedStreams[39m
+[32m  ✓ [39m[90mPyCall[39m
+[32m  ✓ [39m[90mCodecZlib[39m
+[32m  ✓ [39m[90mStructArrays[39m
+[32m  ✓ [39m[90mGPUArrays[39m
+[32m  ✓ [39m[90mDiffResults[39m
+[32m  ✓ [39m[90mContour[39m
+[32m  ✓ [39m[90mTimerOutputs[39m
+[32m  ✓ [39m[90mDataDeps[39m
+[32m  ✓ [39m[90mRandomNumbers[39m
+[32m  ✓ [39m[90mColorTypes[39m
+[32m  ✓ [39m[90mLogExpFunctions[39m
+[32m  ✓ [39m[90mLatexify[39m
+[32m  ✓ [39mPlutoUI
+[32m  ✓ [39m[90mArrayInterface[39m
+[32m  ✓ [39m[90mFriBidi_jll[39m
+[32m  ✓ [39m[90mLibuuid_jll[39m
+[32m  ✓ [39m[90mlibfdk_aac_jll[39m
+[32m  ✓ [39m[90mOpenSSL_jll[39m
+[32m  ✓ [39m[90mZstd_jll[39m
+[32m  ✓ [39m[90mPixman_jll[39m
+[32m  ✓ [39m[90mJpegTurbo_jll[39m
+[32m  ✓ [39m[90mExpat_jll[39m
+[32m  ✓ [39m[90mLibmount_jll[39m
+[32m  ✓ [39m[90mLibiconv_jll[39m
+[32m  ✓ [39m[90mXorg_libXdmcp_jll[39m
+[32m  ✓ [39m[90mlibpng_jll[39m
+[32m  ✓ [39m[90mLz4_jll[39m
+[32m  ✓ [39m[90mOgg_jll[39m
+[32m  ✓ [39m[90mXorg_libXau_jll[39m
+[32m  ✓ [39m[90mx264_jll[39m
+[32m  ✓ [39m[90mLibVPX_jll[39m
+[32m  ✓ [39m[90mXorg_xtrans_jll[39m
+[32m  ✓ [39m[90mLAME_jll[39m
+[32m  ✓ [39m[90mLibffi_jll[39m
+[32m  ✓ [39m[90mPCRE_jll[39m
+[32m  ✓ [39m[90mLibgpg_error_jll[39m
+[32m  ✓ [39m[90mx265_jll[39m
+[32m  ✓ [39m[90mBzip2_jll[39m
+[32m  ✓ [39m[90mOpenSpecFun_jll[39m
+[32m  ✓ [39m[90mLZO_jll[39m
+[32m  ✓ [39m[90mOpus_jll[39m
+[32m  ✓ [39m[90mLLVMExtra_jll[39m
+[32m  ✓ [39m[90mEarCut_jll[39m
+[32m  ✓ [39m[90mXorg_libpthread_stubs_jll[39m
+[32m  ✓ [39m[90mJuno[39m
+[32m  ✓ [39m[90mSortingAlgorithms[39m
+[32m  ✓ [39m[90mRandom123[39m
+[32m  ✓ [39m[90mNNlib[39m
+[32m  ✓ [39m[90mHDF5_jll[39m
+[32m  ✓ [39m[90mLibtiff_jll[39m
+[32m  ✓ [39mColors
+[32m  ✓ [39m[90mChainRules[39m
+[32m  ✓ [39m[90mXML2_jll[39m
+[32m  ✓ [39m[90mBlosc_jll[39m
+[32m  ✓ [39m[90mlibvorbis_jll[39m
+[32m  ✓ [39m[90mLibgcrypt_jll[39m
+[32m  ✓ [39m[90mFreeType2_jll[39m
+[32m  ✓ [39m[90mLLVM[39m
+[32m  ✓ [39m[90mSpecialFunctions[39m
+[32m  ✓ [39m[90mStatsBase[39m
+[32m  ✓ [39m[90mGettext_jll[39m
+[32m  ✓ [39m[90mWayland_jll[39m
+[32m  ✓ [39m[90mGeometryBasics[39m
+[32m  ✓ [39m[90mBlosc[39m
+[32m  ✓ [39m[90mlibass_jll[39m
+[32m  ✓ [39m[90mXSLT_jll[39m
+[32m  ✓ [39m[90mColorSchemes[39m
+[32m  ✓ [39m[90mDiffRules[39m
+[32m  ✓ [39m[90mFontconfig_jll[39m
+[32m  ✓ [39m[90mWayland_protocols_jll[39m
+[32m  ✓ [39m[90mGlib_jll[39m
+[32m  ✓ [39m[90mFFMPEG_jll[39m
+[32m  ✓ [39m[90mHDF5[39m
+[32m  ✓ [39m[90mXorg_libxcb_jll[39m
+[32m  ✓ [39m[90mGPUCompiler[39m
+[32m  ✓ [39m[90mFFMPEG[39m
+[32m  ✓ [39m[90mMAT[39m
+[32m  ✓ [39m[90mXorg_libX11_jll[39m
+[32m  ✓ [39m[90mForwardDiff[39m
+[32m  ✓ [39m[90mXorg_xcb_util_jll[39m
+[32m  ✓ [39m[90mPlotUtils[39m
+[32m  ✓ [39m[90mXorg_libxkbfile_jll[39m
+[32m  ✓ [39mMLDatasets
+[32m  ✓ [39m[90mXorg_libXext_jll[39m
+[32m  ✓ [39m[90mXorg_libXfixes_jll[39m
+[32m  ✓ [39m[90mXorg_libXrender_jll[39m
+[32m  ✓ [39m[90mXorg_xcb_util_image_jll[39m
+[32m  ✓ [39m[90mXorg_xcb_util_keysyms_jll[39m
+[32m  ✓ [39m[90mXorg_xcb_util_renderutil_jll[39m
+[32m  ✓ [39m[90mXorg_xcb_util_wm_jll[39m
+[32m  ✓ [39m[90mZygote[39m
+[32m  ✓ [39m[90mPlotThemes[39m
+[32m  ✓ [39m[90mXorg_xkbcomp_jll[39m
+[32m  ✓ [39m[90mRecipesPipeline[39m
+[32m  ✓ [39m[90mLibglvnd_jll[39m
+[32m  ✓ [39m[90mXorg_libXinerama_jll[39m
+[32m  ✓ [39m[90mXorg_libXi_jll[39m
+[32m  ✓ [39m[90mCairo_jll[39m
+[32m  ✓ [39m[90mXorg_libXrandr_jll[39m
+[32m  ✓ [39m[90mXorg_libXcursor_jll[39m
+[32m  ✓ [39m[90mXorg_xkeyboard_config_jll[39m
+[32m  ✓ [39m[90mGLFW_jll[39m
+[32m  ✓ [39m[90mxkbcommon_jll[39m
+[32m  ✓ [39m[90mQt5Base_jll[39m
+[32m  ✓ [39m[90mGR_jll[39m
+[32m  ✓ [39m[90mGR[39m
+[32m  ✓ [39m[90mCUDA[39m
+[32m  ✓ [39m[90mNNlibCUDA[39m
+[32m  ✓ [39mFlux
+[32m  ✓ [39mPlots
+  156 dependencies successfully precompiled in 150 seconds (17 already precompiled)
+�Flux�]�[32m[1m   Installed[22m[39m LLVMExtra_jll ──────────────── v0.0.7+0
+[32m[1m   Installed[22m[39m LZO_jll ────────────────────── v2.10.1+0
+[32m[1m   Installed[22m[39m Fontconfig_jll ─────────────── v2.13.1+14
+[32m[1m   Installed[22m[39m Qt5Base_jll ────────────────── v5.15.3+0
+[32m[1m   Installed[22m[39m Adapt ──────────────────────── v3.3.1
+[32m[1m   Installed[22m[39m ExprTools ──────────────────── v0.1.6
+[32m[1m   Installed[22m[39m URIParser ──────────────────── v0.4.1
+[32m[1m   Installed[22m[39m PyCall ─────────────────────── v1.92.3
+[32m[1m   Installed[22m[39m EarCut_jll ─────────────────── v2.1.5+1
+[32m[1m   Installed[22m[39m Ogg_jll ────────────────────── v1.3.5+0
+[32m[1m   Installed[22m[39m Suppressor ─────────────────── v0.2.0
+[32m[1m   Installed[22m[39m PlotThemes ─────────────────── v2.0.1
+[32m[1m   Installed[22m[39m TimerOutputs ───────────────── v0.5.12
+[32m[1m   Installed[22m[39m IterTools ──────────────────── v1.3.0
+[32m[1m   Installed[22m[39m Requires ───────────────────── v1.1.3
+[32m[1m   Installed[22m[39m ForwardDiff ────────────────── v0.10.19
+[32m[1m   Installed[22m[39m Xorg_libXfixes_jll ─────────── v5.0.3+4
+[32m[1m   Installed[22m[39m x265_jll ───────────────────── v3.0.0+3
+[32m[1m   Installed[22m[39m Lz4_jll ────────────────────── v1.9.3+0
+[32m[1m   Installed[22m[39m XSLT_jll ───────────────────── v1.1.34+0
+[32m[1m   Installed[22m[39m PlotUtils ──────────────────── v1.0.11
+[32m[1m   Installed[22m[39m Conda ──────────────────────── v1.5.2
+[32m[1m   Installed[22m[39m Functors ───────────────────── v0.2.3
+[32m[1m   Installed[22m[39m StatsBase ──────────────────── v0.33.9
+[32m[1m   Installed[22m[39m libfdk_aac_jll ─────────────── v0.1.6+4
+[32m[1m   Installed[22m[39m Glib_jll ───────────────────── v2.68.3+0
+[32m[1m   Installed[22m[39m Blosc ──────────────────────── v0.7.0
+[32m[1m   Installed[22m[39m SortingAlgorithms ──────────── v1.0.1
+[32m[1m   Installed[22m[39m FillArrays ─────────────────── v0.12.1
+[32m[1m   Installed[22m[39m Preferences ────────────────── v1.2.2
+[32m[1m   Installed[22m[39m DataDeps ───────────────────── v0.7.7
+[32m[1m   Installed[22m[39m Plots ──────────────────────── v1.20.0
+[32m[1m   Installed[22m[39m Libmount_jll ───────────────── v2.35.0+0
+[32m[1m   Installed[22m[39m HDF5_jll ───────────────────── v1.12.0+1
+[32m[1m   Installed[22m[39m Gettext_jll ────────────────── v0.21.0+0
+[32m[1m   Installed[22m[39m Libglvnd_jll ───────────────── v1.3.0+3
+[32m[1m   Installed[22m[39m CEnum ──────────────────────── v0.4.1
+[32m[1m   Installed[22m[39m LaTeXStrings ───────────────── v1.2.1
+[32m[1m   Installed[22m[39m SpecialFunctions ───────────── v1.6.1
+[32m[1m   Installed[22m[39m GPUCompiler ────────────────── v0.12.8
+[32m[1m   Installed[22m[39m Libgpg_error_jll ───────────── v1.42.0+0
+[32m[1m   Installed[22m[39m Pixman_jll ─────────────────── v0.40.1+0
+[32m[1m   Installed[22m[39m FFMPEG ─────────────────────── v0.4.1
+[32m[1m   Installed[22m[39m StatsAPI ───────────────────── v1.0.0
+[32m[1m   Installed[22m[39m Xorg_xcb_util_jll ──────────── v0.4.0+1
+[32m[1m   Installed[22m[39m Missings ───────────────────── v1.0.0
+[32m[1m   Installed[22m[39m Bzip2_jll ──────────────────── v1.0.6+5
+[32m[1m   Installed[22m[39m Grisu ──────────────────────── v1.0.2
+[32m[1m   Installed[22m[39m Formatting ─────────────────── v0.4.2
+[32m[1m   Installed[22m[39m BinDeps ────────────────────── v1.0.2
+[32m[1m   Installed[22m[39m BufferedStreams ────────────── v1.0.0
+[32m[1m   Installed[22m[39m DocStringExtensions ────────── v0.8.5
+[32m[1m   Installed[22m[39m Xorg_libXdmcp_jll ──────────── v1.1.3+4
+[32m[1m   Installed[22m[39m GLFW_jll ───────────────────── v3.3.5+0
+[32m[1m   Installed[22m[39m Libuuid_jll ────────────────── v2.36.0+0
+[32m[1m   Installed[22m[39m Xorg_libX11_jll ────────────── v1.6.9+4
+[32m[1m   Installed[22m[39m Xorg_libXrandr_jll ─────────── v1.5.2+4
+[32m[1m   Installed[22m[39m NNlib ──────────────────────── v0.7.27
+[32m[1m   Installed[22m[39m XML2_jll ───────────────────── v2.9.12+0
+[32m[1m   Installed[22m[39m Showoff ────────────────────── v1.0.3
+[32m[1m   Installed[22m[39m AbstractTrees ──────────────── v0.3.4
+[32m[1m   Installed[22m[39m Juno ───────────────────────── v0.8.4
+[32m[1m   Installed[22m[39m ChainRulesCore ─────────────── v1.3.0
+[32m[1m   Installed[22m[39m MLDatasets ─────────────────── v0.5.9
+[32m[1m   Installed[22m[39m Cairo_jll ──────────────────── v1.16.0+6
+[32m[1m   Installed[22m[39m GR_jll ─────────────────────── v0.58.1+0
+[32m[1m   Installed[22m[39m Libgcrypt_jll ──────────────── v1.8.7+0
+[32m[1m   Installed[22m[39m BFloat16s ──────────────────── v0.1.0
+[32m[1m   Installed[22m[39m Latexify ───────────────────── v0.15.6
+[32m[1m   Installed[22m[39m x264_jll ───────────────────── v2020.7.14+2
+[32m[1m   Installed[22m[39m Xorg_libxkbfile_jll ────────── v1.1.0+4
+[32m[1m   Installed[22m[39m Xorg_xcb_util_keysyms_jll ──── v0.4.0+1
+[32m[1m   Installed[22m[39m DataStructures ─────────────── v0.18.10
+[32m[1m   Installed[22m[39m GPUArrays ──────────────────── v8.0.1
+[32m[1m   Installed[22m[39m Zygote ─────────────────────── v0.6.19
+[32m[1m   Installed[22m[39m OpenSSL_jll ────────────────── v1.1.10+0
+[32m[1m   Installed[22m[39m OpenSpecFun_jll ────────────── v0.5.5+0
+[32m[1m   Installed[22m[39m Zstd_jll ───────────────────── v1.5.0+0
+[32m[1m   Installed[22m[39m libass_jll ─────────────────── v0.14.0+4
+[32m[1m   Installed[22m[39m libvorbis_jll ──────────────── v1.3.7+0
+[32m[1m   Installed[22m[39m FreeType2_jll ──────────────── v2.10.1+5
+[32m[1m   Installed[22m[39m Xorg_libXau_jll ────────────── v1.0.9+4
+[32m[1m   Installed[22m[39m Wayland_jll ────────────────── v1.19.0+0
+[32m[1m   Installed[22m[39m FriBidi_jll ────────────────── v1.0.10+0
+[32m[1m   Installed[22m[39m Xorg_libXinerama_jll ───────── v1.1.4+4
+[32m[1m   Installed[22m[39m MacroTools ─────────────────── v0.5.7
+[32m[1m   Installed[22m[39m ZipFile ────────────────────── v0.9.3
+[32m[1m   Installed[22m[39m Colors ─────────────────────── v0.12.8
+[32m[1m   Installed[22m[39m Libffi_jll ─────────────────── v3.2.2+0
+[32m[1m   Installed[22m[39m FFMPEG_jll ─────────────────── v4.3.1+4
+[32m[1m   Installed[22m[39m GZip ───────────────────────── v0.5.1
+[32m[1m   Installed[22m[39m ColorSchemes ───────────────── v3.14.0
+[32m[1m   Installed[22m[39m GR ─────────────────────────── v0.58.1
+[32m[1m   Installed[22m[39m RecipesPipeline ────────────── v0.3.4
+[32m[1m   Installed[22m[39m VersionParsing ─────────────── v1.2.0
+[32m[1m   Installed[22m[39m Libtiff_jll ────────────────── v4.3.0+0
+[32m[1m   Installed[22m[39m Compat ─────────────────────── v3.32.0
+[32m[1m   Installed[22m[39m DiffResults ────────────────── v1.0.3
+[32m[1m   Installed[22m[39m LogExpFunctions ────────────── v0.3.0
+[32m[1m   Installed[22m[39m ColorTypes ─────────────────── v0.11.0
+[32m[1m   Installed[22m[39m NaNMath ────────────────────── v0.3.5
+[32m[1m   Installed[22m[39m MAT ────────────────────────── v0.10.1
+[32m[1m   Installed[22m[39m Xorg_xcb_util_image_jll ────── v0.4.0+1
+[32m[1m   Installed[22m[39m RandomNumbers ──────────────── v1.5.3
+[32m[1m   Installed[22m[39m Media ──────────────────────── v0.5.0
+[32m[1m   Installed[22m[39m Blosc_jll ──────────────────── v1.21.0+0
+[32m[1m   Installed[22m[39m Xorg_xcb_util_renderutil_jll ─ v0.3.9+1
+[32m[1m   Installed[22m[39m CommonSubexpressions ───────── v0.3.0
+[32m[1m   Installed[22m[39m IRTools ────────────────────── v0.4.3
+[32m[1m   Installed[22m[39m RecipesBase ────────────────── v1.1.1
+[32m[1m   Installed[22m[39m GeometryBasics ─────────────── v0.4.1
+[32m[1m   Installed[22m[39m AbstractFFTs ───────────────── v1.0.1
+[32m[1m   Installed[22m[39m HDF5 ───────────────────────── v0.15.6
+[32m[1m   Installed[22m[39m Wayland_protocols_jll ──────── v1.18.0+4
+[32m[1m   Installed[22m[39m Xorg_libpthread_stubs_jll ──── v0.1.0+3
+[32m[1m   Installed[22m[39m CodecZlib ──────────────────── v0.7.0
+[32m[1m   Installed[22m[39m PCRE_jll ───────────────────── v8.44.0+0
+[32m[1m   Installed[22m[39m Opus_jll ───────────────────── v1.3.2+0
+[32m[1m   Installed[22m[39m Xorg_xcb_util_wm_jll ───────── v0.4.1+1
+[32m[1m   Installed[22m[39m StructArrays ───────────────── v0.6.0
+[32m[1m   Installed[22m[39m JLLWrappers ────────────────── v1.3.0
+[32m[1m   Installed[22m[39m JpegTurbo_jll ──────────────── v2.1.0+0
+[32m[1m   Installed[22m[39m Measures ───────────────────── v0.3.1
+[32m[1m   Installed[22m[39m Scratch ────────────────────── v1.1.0
+[32m[1m   Installed[22m[39m ArrayInterface ─────────────── v3.1.23
+[32m[1m   Installed[22m[39m BinaryProvider ─────────────── v0.5.10
+[32m[1m   Installed[22m[39m ChainRules ─────────────────── v1.5.1
+[32m[1m   Installed[22m[39m Contour ────────────────────── v0.5.7
+[32m[1m   Installed[22m[39m Xorg_libxcb_jll ────────────── v1.13.0+3
+[32m[1m   Installed[22m[39m Xorg_libXext_jll ───────────── v1.3.4+4
+[32m[1m   Installed[22m[39m LibVPX_jll ─────────────────── v1.10.0+0
+[32m[1m   Installed[22m[39m Xorg_xkbcomp_jll ───────────── v1.4.2+4
+[32m[1m   Installed[22m[39m Xorg_libXcursor_jll ────────── v1.2.0+4
+[32m[1m   Installed[22m[39m StaticArrays ───────────────── v1.2.12
+[32m[1m   Installed[22m[39m LLVM ───────────────────────── v4.2.0
+[32m[1m   Installed[22m[39m Xorg_libXi_jll ─────────────── v1.7.10+4
+[32m[1m   Installed[22m[39m CUDA ───────────────────────── v3.3.5
+[32m[1m   Installed[22m[39m Xorg_xkeyboard_config_jll ──── v2.27.0+4
+[32m[1m   Installed[22m[39m ZygoteRules ────────────────── v0.2.1
+[32m[1m   Installed[22m[39m FixedPointNumbers ──────────── v0.8.4
+[32m[1m   Installed[22m[39m IfElse ─────────────────────── v0.1.0
+[32m[1m   Installed[22m[39m Static ─────────────────────── v0.3.0
+[32m[1m   Installed[22m[39m Random123 ──────────────────── v1.4.2
+[32m[1m   Installed[22m[39m Xorg_xtrans_jll ────────────── v1.4.0+3
+[32m[1m   Installed[22m[39m Expat_jll ──────────────────── v2.2.10+0
+[32m[1m   Installed[22m[39m Xorg_libXrender_jll ────────── v0.9.10+4
+[32m[1m   Installed[22m[39m TranscodingStreams ─────────── v0.9.6
+[32m[1m   Installed[22m[39m PlutoUI ────────────────────── v0.7.9
+[32m[1m   Installed[22m[39m DiffRules ──────────────────── v1.2.1
+[32m[1m   Installed[22m[39m NNlibCUDA ──────────────────── v0.1.7
+[32m[1m   Installed[22m[39m Libiconv_jll ───────────────── v1.16.1+1
+[32m[1m   Installed[22m[39m Flux ───────────────────────── v0.12.6
+[32m[1m   Installed[22m[39m libpng_jll ─────────────────── v1.6.38+0
+[32m[1m   Installed[22m[39m LAME_jll ───────────────────── v3.100.1+0
+[32m[1m   Installed[22m[39m Reexport ───────────────────── v1.1.0
+[32m[1m   Installed[22m[39m xkbcommon_jll ──────────────── v0.9.1+5
+[32m[1m   Installed[22m[39m IrrationalConstants ────────── v0.1.0
+[32m[1m  No Changes[22m[39m to `/tmp/jl_pa7U80/Project.toml`
+[32m[1m  No Changes[22m[39m to `/tmp/jl_pa7U80/Manifest.toml`
+[32m[1m    Building[22m[39m Conda ────→ `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/299304989a5e6473d985212c28928899c74e9421/build.log`
+[32m[1m    Building[22m[39m PyCall ───→ `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/169bb8ea6b1b143c5cf57df6d34d022a7b60c6db/build.log`
+[32m[1m    Building[22m[39m DataDeps ─→ `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/4f0e41ff461d42cfc62ff0de4f1cd44c6e6b3771/build.log`
+[32m[1m    Building[22m[39m GR ───────→ `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/182da592436e287758ded5be6e32c406de3a2e47/build.log`
+[32m[1m    Building[22m[39m HDF5 ─────→ `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/83173193dc242ce4b037f0263a7cc45afb5a0b85/build.log`
+[32m[1m    Building[22m[39m Random123 → `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/0e8b146557ad1c6deb1367655e052276690e71a3/build.log`
+[32m[1mPrecompiling[22m[39m project...
+[32m  ✓ [39m[90mIfElse[39m
+[32m  ✓ [39m[90mGZip[39m
+[32m  ✓ [39m[90mPreferences[39m
+[32m  ✓ [39m[90mBFloat16s[39m
+[32m  ✓ [39m[90mMacroTools[39m
+[32m  ✓ [39m[90mGrisu[39m
+[32m  ✓ [39m[90mReexport[39m
+[32m  ✓ [39m[90mURIParser[39m
+[32m  ✓ [39m[90mRecipesBase[39m
+[32m  ✓ [39m[90mAbstractTrees[39m
+[32m  ✓ [39m[90mFixedPointNumbers[39m
+[32m  ✓ [39m[90mLaTeXStrings[39m
+[32m  ✓ [39m[90mStatsAPI[39m
+[32m  ✓ [39m[90mFillArrays[39m
+[32m  ✓ [39m[90mCompat[39m
+[32m  ✓ [39m[90mNaNMath[39m
+[32m  ✓ [39m[90mCEnum[39m
+[32m  ✓ [39m[90mAdapt[39m
+[32m  ✓ [39m[90mFormatting[39m
+[32m  ✓ [39m[90mIterTools[39m
+[32m  ✓ [39m[90mTranscodingStreams[39m
+[32m  ✓ [39m[90mStaticArrays[39m
+[32m  ✓ [39m[90mExprTools[39m
+[32m  ✓ [39m[90mBinaryProvider[39m
+[32m  ✓ [39m[90mCompilerSupportLibraries_jll[39m
+[32m  ✓ [39m[90mAbstractFFTs[39m
+[32m  ✓ [39m[90mDocStringExtensions[39m
+[32m  ✓ [39m[90mSuppressor[39m
+[32m  ✓ [39m[90mMeasures[39m
+[32m  ✓ [39m[90mRequires[39m
+[32m  ✓ [39m[90mScratch[39m
+[32m  ✓ [39m[90mIrrationalConstants[39m
+[32m  ✓ [39m[90mZipFile[39m
+[32m  ✓ [39m[90mMissings[39m
+[32m  ✓ [39m[90mStatic[39m
+[32m  ✓ [39m[90mJLLWrappers[39m
+[32m  ✓ [39m[90mCommonSubexpressions[39m
+[32m  ✓ [39m[90mMedia[39m
+[32m  ✓ [39m[90mFunctors[39m
+[32m  ✓ [39m[90mZygoteRules[39m
+[32m  ✓ [39m[90mShowoff[39m
+[32m  ✓ [39m[90mIRTools[39m
+[32m  ✓ [39m[90mBinDeps[39m
+[32m  ✓ [39m[90mChainRulesCore[39m
+[32m  ✓ [39m[90mDataStructures[39m
+[32m  ✓ [39m[90mBufferedStreams[39m
+[32m  ✓ [39m[90mPyCall[39m
+[32m  ✓ [39m[90mCodecZlib[39m
+[32m  ✓ [39m[90mStructArrays[39m
+[32m  ✓ [39m[90mGPUArrays[39m
+[32m  ✓ [39m[90mDiffResults[39m
+[32m  ✓ [39m[90mContour[39m
+[32m  ✓ [39m[90mTimerOutputs[39m
+[32m  ✓ [39m[90mDataDeps[39m
+[32m  ✓ [39m[90mRandomNumbers[39m
+[32m  ✓ [39m[90mColorTypes[39m
+[32m  ✓ [39m[90mLogExpFunctions[39m
+[32m  ✓ [39m[90mLatexify[39m
+[32m  ✓ [39mPlutoUI
+[32m  ✓ [39m[90mArrayInterface[39m
+[32m  ✓ [39m[90mFriBidi_jll[39m
+[32m  ✓ [39m[90mLibuuid_jll[39m
+[32m  ✓ [39m[90mlibfdk_aac_jll[39m
+[32m  ✓ [39m[90mOpenSSL_jll[39m
+[32m  ✓ [39m[90mZstd_jll[39m
+[32m  ✓ [39m[90mPixman_jll[39m
+[32m  ✓ [39m[90mJpegTurbo_jll[39m
+[32m  ✓ [39m[90mExpat_jll[39m
+[32m  ✓ [39m[90mLibmount_jll[39m
+[32m  ✓ [39m[90mLibiconv_jll[39m
+[32m  ✓ [39m[90mXorg_libXdmcp_jll[39m
+[32m  ✓ [39m[90mlibpng_jll[39m
+[32m  ✓ [39m[90mLz4_jll[39m
+[32m  ✓ [39m[90mOgg_jll[39m
+[32m  ✓ [39m[90mXorg_libXau_jll[39m
+[32m  ✓ [39m[90mx264_jll[39m
+[32m  ✓ [39m[90mLibVPX_jll[39m
+[32m  ✓ [39m[90mXorg_xtrans_jll[39m
+[32m  ✓ [39m[90mLAME_jll[39m
+[32m  ✓ [39m[90mLibffi_jll[39m
+[32m  ✓ [39m[90mPCRE_jll[39m
+[32m  ✓ [39m[90mLibgpg_error_jll[39m
+[32m  ✓ [39m[90mx265_jll[39m
+[32m  ✓ [39m[90mBzip2_jll[39m
+[32m  ✓ [39m[90mOpenSpecFun_jll[39m
+[32m  ✓ [39m[90mLZO_jll[39m
+[32m  ✓ [39m[90mOpus_jll[39m
+[32m  ✓ [39m[90mLLVMExtra_jll[39m
+[32m  ✓ [39m[90mEarCut_jll[39m
+[32m  ✓ [39m[90mXorg_libpthread_stubs_jll[39m
+[32m  ✓ [39m[90mJuno[39m
+[32m  ✓ [39m[90mSortingAlgorithms[39m
+[32m  ✓ [39m[90mRandom123[39m
+[32m  ✓ [39m[90mNNlib[39m
+[32m  ✓ [39m[90mHDF5_jll[39m
+[32m  ✓ [39m[90mLibtiff_jll[39m
+[32m  ✓ [39mColors
+[32m  ✓ [39m[90mChainRules[39m
+[32m  ✓ [39m[90mXML2_jll[39m
+[32m  ✓ [39m[90mBlosc_jll[39m
+[32m  ✓ [39m[90mlibvorbis_jll[39m
+[32m  ✓ [39m[90mLibgcrypt_jll[39m
+[32m  ✓ [39m[90mFreeType2_jll[39m
+[32m  ✓ [39m[90mLLVM[39m
+[32m  ✓ [39m[90mSpecialFunctions[39m
+[32m  ✓ [39m[90mStatsBase[39m
+[32m  ✓ [39m[90mGettext_jll[39m
+[32m  ✓ [39m[90mWayland_jll[39m
+[32m  ✓ [39m[90mGeometryBasics[39m
+[32m  ✓ [39m[90mBlosc[39m
+[32m  ✓ [39m[90mlibass_jll[39m
+[32m  ✓ [39m[90mXSLT_jll[39m
+[32m  ✓ [39m[90mColorSchemes[39m
+[32m  ✓ [39m[90mDiffRules[39m
+[32m  ✓ [39m[90mFontconfig_jll[39m
+[32m  ✓ [39m[90mWayland_protocols_jll[39m
+[32m  ✓ [39m[90mGlib_jll[39m
+[32m  ✓ [39m[90mFFMPEG_jll[39m
+[32m  ✓ [39m[90mHDF5[39m
+[32m  ✓ [39m[90mXorg_libxcb_jll[39m
+[32m  ✓ [39m[90mGPUCompiler[39m
+[32m  ✓ [39m[90mFFMPEG[39m
+[32m  ✓ [39m[90mMAT[39m
+[32m  ✓ [39m[90mXorg_libX11_jll[39m
+[32m  ✓ [39m[90mForwardDiff[39m
+[32m  ✓ [39m[90mXorg_xcb_util_jll[39m
+[32m  ✓ [39m[90mPlotUtils[39m
+[32m  ✓ [39m[90mXorg_libxkbfile_jll[39m
+[32m  ✓ [39mMLDatasets
+[32m  ✓ [39m[90mXorg_libXext_jll[39m
+[32m  ✓ [39m[90mXorg_libXfixes_jll[39m
+[32m  ✓ [39m[90mXorg_libXrender_jll[39m
+[32m  ✓ [39m[90mXorg_xcb_util_image_jll[39m
+[32m  ✓ [39m[90mXorg_xcb_util_keysyms_jll[39m
+[32m  ✓ [39m[90mXorg_xcb_util_renderutil_jll[39m
+[32m  ✓ [39m[90mXorg_xcb_util_wm_jll[39m
+[32m  ✓ [39m[90mZygote[39m
+[32m  ✓ [39m[90mPlotThemes[39m
+[32m  ✓ [39m[90mXorg_xkbcomp_jll[39m
+[32m  ✓ [39m[90mRecipesPipeline[39m
+[32m  ✓ [39m[90mLibglvnd_jll[39m
+[32m  ✓ [39m[90mXorg_libXinerama_jll[39m
+[32m  ✓ [39m[90mXorg_libXi_jll[39m
+[32m  ✓ [39m[90mCairo_jll[39m
+[32m  ✓ [39m[90mXorg_libXrandr_jll[39m
+[32m  ✓ [39m[90mXorg_libXcursor_jll[39m
+[32m  ✓ [39m[90mXorg_xkeyboard_config_jll[39m
+[32m  ✓ [39m[90mGLFW_jll[39m
+[32m  ✓ [39m[90mxkbcommon_jll[39m
+[32m  ✓ [39m[90mQt5Base_jll[39m
+[32m  ✓ [39m[90mGR_jll[39m
+[32m  ✓ [39m[90mGR[39m
+[32m  ✓ [39m[90mCUDA[39m
+[32m  ✓ [39m[90mNNlibCUDA[39m
+[32m  ✓ [39mFlux
+[32m  ✓ [39mPlots
+  156 dependencies successfully precompiled in 150 seconds (17 already precompiled)
+�Colors�]�[32m[1m   Installed[22m[39m LLVMExtra_jll ──────────────── v0.0.7+0
+[32m[1m   Installed[22m[39m LZO_jll ────────────────────── v2.10.1+0
+[32m[1m   Installed[22m[39m Fontconfig_jll ─────────────── v2.13.1+14
+[32m[1m   Installed[22m[39m Qt5Base_jll ────────────────── v5.15.3+0
+[32m[1m   Installed[22m[39m Adapt ──────────────────────── v3.3.1
+[32m[1m   Installed[22m[39m ExprTools ──────────────────── v0.1.6
+[32m[1m   Installed[22m[39m URIParser ──────────────────── v0.4.1
+[32m[1m   Installed[22m[39m PyCall ─────────────────────── v1.92.3
+[32m[1m   Installed[22m[39m EarCut_jll ─────────────────── v2.1.5+1
+[32m[1m   Installed[22m[39m Ogg_jll ────────────────────── v1.3.5+0
+[32m[1m   Installed[22m[39m Suppressor ─────────────────── v0.2.0
+[32m[1m   Installed[22m[39m PlotThemes ─────────────────── v2.0.1
+[32m[1m   Installed[22m[39m TimerOutputs ───────────────── v0.5.12
+[32m[1m   Installed[22m[39m IterTools ──────────────────── v1.3.0
+[32m[1m   Installed[22m[39m Requires ───────────────────── v1.1.3
+[32m[1m   Installed[22m[39m ForwardDiff ────────────────── v0.10.19
+[32m[1m   Installed[22m[39m Xorg_libXfixes_jll ─────────── v5.0.3+4
+[32m[1m   Installed[22m[39m x265_jll ───────────────────── v3.0.0+3
+[32m[1m   Installed[22m[39m Lz4_jll ────────────────────── v1.9.3+0
+[32m[1m   Installed[22m[39m XSLT_jll ───────────────────── v1.1.34+0
+[32m[1m   Installed[22m[39m PlotUtils ──────────────────── v1.0.11
+[32m[1m   Installed[22m[39m Conda ──────────────────────── v1.5.2
+[32m[1m   Installed[22m[39m Functors ───────────────────── v0.2.3
+[32m[1m   Installed[22m[39m StatsBase ──────────────────── v0.33.9
+[32m[1m   Installed[22m[39m libfdk_aac_jll ─────────────── v0.1.6+4
+[32m[1m   Installed[22m[39m Glib_jll ───────────────────── v2.68.3+0
+[32m[1m   Installed[22m[39m Blosc ──────────────────────── v0.7.0
+[32m[1m   Installed[22m[39m SortingAlgorithms ──────────── v1.0.1
+[32m[1m   Installed[22m[39m FillArrays ─────────────────── v0.12.1
+[32m[1m   Installed[22m[39m Preferences ────────────────── v1.2.2
+[32m[1m   Installed[22m[39m DataDeps ───────────────────── v0.7.7
+[32m[1m   Installed[22m[39m Plots ──────────────────────── v1.20.0
+[32m[1m   Installed[22m[39m Libmount_jll ───────────────── v2.35.0+0
+[32m[1m   Installed[22m[39m HDF5_jll ───────────────────── v1.12.0+1
+[32m[1m   Installed[22m[39m Gettext_jll ────────────────── v0.21.0+0
+[32m[1m   Installed[22m[39m Libglvnd_jll ───────────────── v1.3.0+3
+[32m[1m   Installed[22m[39m CEnum ──────────────────────── v0.4.1
+[32m[1m   Installed[22m[39m LaTeXStrings ───────────────── v1.2.1
+[32m[1m   Installed[22m[39m SpecialFunctions ───────────── v1.6.1
+[32m[1m   Installed[22m[39m GPUCompiler ────────────────── v0.12.8
+[32m[1m   Installed[22m[39m Libgpg_error_jll ───────────── v1.42.0+0
+[32m[1m   Installed[22m[39m Pixman_jll ─────────────────── v0.40.1+0
+[32m[1m   Installed[22m[39m FFMPEG ─────────────────────── v0.4.1
+[32m[1m   Installed[22m[39m StatsAPI ───────────────────── v1.0.0
+[32m[1m   Installed[22m[39m Xorg_xcb_util_jll ──────────── v0.4.0+1
+[32m[1m   Installed[22m[39m Missings ───────────────────── v1.0.0
+[32m[1m   Installed[22m[39m Bzip2_jll ──────────────────── v1.0.6+5
+[32m[1m   Installed[22m[39m Grisu ──────────────────────── v1.0.2
+[32m[1m   Installed[22m[39m Formatting ─────────────────── v0.4.2
+[32m[1m   Installed[22m[39m BinDeps ────────────────────── v1.0.2
+[32m[1m   Installed[22m[39m BufferedStreams ────────────── v1.0.0
+[32m[1m   Installed[22m[39m DocStringExtensions ────────── v0.8.5
+[32m[1m   Installed[22m[39m Xorg_libXdmcp_jll ──────────── v1.1.3+4
+[32m[1m   Installed[22m[39m GLFW_jll ───────────────────── v3.3.5+0
+[32m[1m   Installed[22m[39m Libuuid_jll ────────────────── v2.36.0+0
+[32m[1m   Installed[22m[39m Xorg_libX11_jll ────────────── v1.6.9+4
+[32m[1m   Installed[22m[39m Xorg_libXrandr_jll ─────────── v1.5.2+4
+[32m[1m   Installed[22m[39m NNlib ──────────────────────── v0.7.27
+[32m[1m   Installed[22m[39m XML2_jll ───────────────────── v2.9.12+0
+[32m[1m   Installed[22m[39m Showoff ────────────────────── v1.0.3
+[32m[1m   Installed[22m[39m AbstractTrees ──────────────── v0.3.4
+[32m[1m   Installed[22m[39m Juno ───────────────────────── v0.8.4
+[32m[1m   Installed[22m[39m ChainRulesCore ─────────────── v1.3.0
+[32m[1m   Installed[22m[39m MLDatasets ─────────────────── v0.5.9
+[32m[1m   Installed[22m[39m Cairo_jll ──────────────────── v1.16.0+6
+[32m[1m   Installed[22m[39m GR_jll ─────────────────────── v0.58.1+0
+[32m[1m   Installed[22m[39m Libgcrypt_jll ──────────────── v1.8.7+0
+[32m[1m   Installed[22m[39m BFloat16s ──────────────────── v0.1.0
+[32m[1m   Installed[22m[39m Latexify ───────────────────── v0.15.6
+[32m[1m   Installed[22m[39m x264_jll ───────────────────── v2020.7.14+2
+[32m[1m   Installed[22m[39m Xorg_libxkbfile_jll ────────── v1.1.0+4
+[32m[1m   Installed[22m[39m Xorg_xcb_util_keysyms_jll ──── v0.4.0+1
+[32m[1m   Installed[22m[39m DataStructures ─────────────── v0.18.10
+[32m[1m   Installed[22m[39m GPUArrays ──────────────────── v8.0.1
+[32m[1m   Installed[22m[39m Zygote ─────────────────────── v0.6.19
+[32m[1m   Installed[22m[39m OpenSSL_jll ────────────────── v1.1.10+0
+[32m[1m   Installed[22m[39m OpenSpecFun_jll ────────────── v0.5.5+0
+[32m[1m   Installed[22m[39m Zstd_jll ───────────────────── v1.5.0+0
+[32m[1m   Installed[22m[39m libass_jll ─────────────────── v0.14.0+4
+[32m[1m   Installed[22m[39m libvorbis_jll ──────────────── v1.3.7+0
+[32m[1m   Installed[22m[39m FreeType2_jll ──────────────── v2.10.1+5
+[32m[1m   Installed[22m[39m Xorg_libXau_jll ────────────── v1.0.9+4
+[32m[1m   Installed[22m[39m Wayland_jll ────────────────── v1.19.0+0
+[32m[1m   Installed[22m[39m FriBidi_jll ────────────────── v1.0.10+0
+[32m[1m   Installed[22m[39m Xorg_libXinerama_jll ───────── v1.1.4+4
+[32m[1m   Installed[22m[39m MacroTools ─────────────────── v0.5.7
+[32m[1m   Installed[22m[39m ZipFile ────────────────────── v0.9.3
+[32m[1m   Installed[22m[39m Colors ─────────────────────── v0.12.8
+[32m[1m   Installed[22m[39m Libffi_jll ─────────────────── v3.2.2+0
+[32m[1m   Installed[22m[39m FFMPEG_jll ─────────────────── v4.3.1+4
+[32m[1m   Installed[22m[39m GZip ───────────────────────── v0.5.1
+[32m[1m   Installed[22m[39m ColorSchemes ───────────────── v3.14.0
+[32m[1m   Installed[22m[39m GR ─────────────────────────── v0.58.1
+[32m[1m   Installed[22m[39m RecipesPipeline ────────────── v0.3.4
+[32m[1m   Installed[22m[39m VersionParsing ─────────────── v1.2.0
+[32m[1m   Installed[22m[39m Libtiff_jll ────────────────── v4.3.0+0
+[32m[1m   Installed[22m[39m Compat ─────────────────────── v3.32.0
+[32m[1m   Installed[22m[39m DiffResults ────────────────── v1.0.3
+[32m[1m   Installed[22m[39m LogExpFunctions ────────────── v0.3.0
+[32m[1m   Installed[22m[39m ColorTypes ─────────────────── v0.11.0
+[32m[1m   Installed[22m[39m NaNMath ────────────────────── v0.3.5
+[32m[1m   Installed[22m[39m MAT ────────────────────────── v0.10.1
+[32m[1m   Installed[22m[39m Xorg_xcb_util_image_jll ────── v0.4.0+1
+[32m[1m   Installed[22m[39m RandomNumbers ──────────────── v1.5.3
+[32m[1m   Installed[22m[39m Media ──────────────────────── v0.5.0
+[32m[1m   Installed[22m[39m Blosc_jll ──────────────────── v1.21.0+0
+[32m[1m   Installed[22m[39m Xorg_xcb_util_renderutil_jll ─ v0.3.9+1
+[32m[1m   Installed[22m[39m CommonSubexpressions ───────── v0.3.0
+[32m[1m   Installed[22m[39m IRTools ────────────────────── v0.4.3
+[32m[1m   Installed[22m[39m RecipesBase ────────────────── v1.1.1
+[32m[1m   Installed[22m[39m GeometryBasics ─────────────── v0.4.1
+[32m[1m   Installed[22m[39m AbstractFFTs ───────────────── v1.0.1
+[32m[1m   Installed[22m[39m HDF5 ───────────────────────── v0.15.6
+[32m[1m   Installed[22m[39m Wayland_protocols_jll ──────── v1.18.0+4
+[32m[1m   Installed[22m[39m Xorg_libpthread_stubs_jll ──── v0.1.0+3
+[32m[1m   Installed[22m[39m CodecZlib ──────────────────── v0.7.0
+[32m[1m   Installed[22m[39m PCRE_jll ───────────────────── v8.44.0+0
+[32m[1m   Installed[22m[39m Opus_jll ───────────────────── v1.3.2+0
+[32m[1m   Installed[22m[39m Xorg_xcb_util_wm_jll ───────── v0.4.1+1
+[32m[1m   Installed[22m[39m StructArrays ───────────────── v0.6.0
+[32m[1m   Installed[22m[39m JLLWrappers ────────────────── v1.3.0
+[32m[1m   Installed[22m[39m JpegTurbo_jll ──────────────── v2.1.0+0
+[32m[1m   Installed[22m[39m Measures ───────────────────── v0.3.1
+[32m[1m   Installed[22m[39m Scratch ────────────────────── v1.1.0
+[32m[1m   Installed[22m[39m ArrayInterface ─────────────── v3.1.23
+[32m[1m   Installed[22m[39m BinaryProvider ─────────────── v0.5.10
+[32m[1m   Installed[22m[39m ChainRules ─────────────────── v1.5.1
+[32m[1m   Installed[22m[39m Contour ────────────────────── v0.5.7
+[32m[1m   Installed[22m[39m Xorg_libxcb_jll ────────────── v1.13.0+3
+[32m[1m   Installed[22m[39m Xorg_libXext_jll ───────────── v1.3.4+4
+[32m[1m   Installed[22m[39m LibVPX_jll ─────────────────── v1.10.0+0
+[32m[1m   Installed[22m[39m Xorg_xkbcomp_jll ───────────── v1.4.2+4
+[32m[1m   Installed[22m[39m Xorg_libXcursor_jll ────────── v1.2.0+4
+[32m[1m   Installed[22m[39m StaticArrays ───────────────── v1.2.12
+[32m[1m   Installed[22m[39m LLVM ───────────────────────── v4.2.0
+[32m[1m   Installed[22m[39m Xorg_libXi_jll ─────────────── v1.7.10+4
+[32m[1m   Installed[22m[39m CUDA ───────────────────────── v3.3.5
+[32m[1m   Installed[22m[39m Xorg_xkeyboard_config_jll ──── v2.27.0+4
+[32m[1m   Installed[22m[39m ZygoteRules ────────────────── v0.2.1
+[32m[1m   Installed[22m[39m FixedPointNumbers ──────────── v0.8.4
+[32m[1m   Installed[22m[39m IfElse ─────────────────────── v0.1.0
+[32m[1m   Installed[22m[39m Static ─────────────────────── v0.3.0
+[32m[1m   Installed[22m[39m Random123 ──────────────────── v1.4.2
+[32m[1m   Installed[22m[39m Xorg_xtrans_jll ────────────── v1.4.0+3
+[32m[1m   Installed[22m[39m Expat_jll ──────────────────── v2.2.10+0
+[32m[1m   Installed[22m[39m Xorg_libXrender_jll ────────── v0.9.10+4
+[32m[1m   Installed[22m[39m TranscodingStreams ─────────── v0.9.6
+[32m[1m   Installed[22m[39m PlutoUI ────────────────────── v0.7.9
+[32m[1m   Installed[22m[39m DiffRules ──────────────────── v1.2.1
+[32m[1m   Installed[22m[39m NNlibCUDA ──────────────────── v0.1.7
+[32m[1m   Installed[22m[39m Libiconv_jll ───────────────── v1.16.1+1
+[32m[1m   Installed[22m[39m Flux ───────────────────────── v0.12.6
+[32m[1m   Installed[22m[39m libpng_jll ─────────────────── v1.6.38+0
+[32m[1m   Installed[22m[39m LAME_jll ───────────────────── v3.100.1+0
+[32m[1m   Installed[22m[39m Reexport ───────────────────── v1.1.0
+[32m[1m   Installed[22m[39m xkbcommon_jll ──────────────── v0.9.1+5
+[32m[1m   Installed[22m[39m IrrationalConstants ────────── v0.1.0
+[32m[1m  No Changes[22m[39m to `/tmp/jl_pa7U80/Project.toml`
+[32m[1m  No Changes[22m[39m to `/tmp/jl_pa7U80/Manifest.toml`
+[32m[1m    Building[22m[39m Conda ────→ `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/299304989a5e6473d985212c28928899c74e9421/build.log`
+[32m[1m    Building[22m[39m PyCall ───→ `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/169bb8ea6b1b143c5cf57df6d34d022a7b60c6db/build.log`
+[32m[1m    Building[22m[39m DataDeps ─→ `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/4f0e41ff461d42cfc62ff0de4f1cd44c6e6b3771/build.log`
+[32m[1m    Building[22m[39m GR ───────→ `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/182da592436e287758ded5be6e32c406de3a2e47/build.log`
+[32m[1m    Building[22m[39m HDF5 ─────→ `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/83173193dc242ce4b037f0263a7cc45afb5a0b85/build.log`
+[32m[1m    Building[22m[39m Random123 → `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/0e8b146557ad1c6deb1367655e052276690e71a3/build.log`
+[32m[1mPrecompiling[22m[39m project...
+[32m  ✓ [39m[90mIfElse[39m
+[32m  ✓ [39m[90mGZip[39m
+[32m  ✓ [39m[90mPreferences[39m
+[32m  ✓ [39m[90mBFloat16s[39m
+[32m  ✓ [39m[90mMacroTools[39m
+[32m  ✓ [39m[90mGrisu[39m
+[32m  ✓ [39m[90mReexport[39m
+[32m  ✓ [39m[90mURIParser[39m
+[32m  ✓ [39m[90mRecipesBase[39m
+[32m  ✓ [39m[90mAbstractTrees[39m
+[32m  ✓ [39m[90mFixedPointNumbers[39m
+[32m  ✓ [39m[90mLaTeXStrings[39m
+[32m  ✓ [39m[90mStatsAPI[39m
+[32m  ✓ [39m[90mFillArrays[39m
+[32m  ✓ [39m[90mCompat[39m
+[32m  ✓ [39m[90mNaNMath[39m
+[32m  ✓ [39m[90mCEnum[39m
+[32m  ✓ [39m[90mAdapt[39m
+[32m  ✓ [39m[90mFormatting[39m
+[32m  ✓ [39m[90mIterTools[39m
+[32m  ✓ [39m[90mTranscodingStreams[39m
+[32m  ✓ [39m[90mStaticArrays[39m
+[32m  ✓ [39m[90mExprTools[39m
+[32m  ✓ [39m[90mBinaryProvider[39m
+[32m  ✓ [39m[90mCompilerSupportLibraries_jll[39m
+[32m  ✓ [39m[90mAbstractFFTs[39m
+[32m  ✓ [39m[90mDocStringExtensions[39m
+[32m  ✓ [39m[90mSuppressor[39m
+[32m  ✓ [39m[90mMeasures[39m
+[32m  ✓ [39m[90mRequires[39m
+[32m  ✓ [39m[90mScratch[39m
+[32m  ✓ [39m[90mIrrationalConstants[39m
+[32m  ✓ [39m[90mZipFile[39m
+[32m  ✓ [39m[90mMissings[39m
+[32m  ✓ [39m[90mStatic[39m
+[32m  ✓ [39m[90mJLLWrappers[39m
+[32m  ✓ [39m[90mCommonSubexpressions[39m
+[32m  ✓ [39m[90mMedia[39m
+[32m  ✓ [39m[90mFunctors[39m
+[32m  ✓ [39m[90mZygoteRules[39m
+[32m  ✓ [39m[90mShowoff[39m
+[32m  ✓ [39m[90mIRTools[39m
+[32m  ✓ [39m[90mBinDeps[39m
+[32m  ✓ [39m[90mChainRulesCore[39m
+[32m  ✓ [39m[90mDataStructures[39m
+[32m  ✓ [39m[90mBufferedStreams[39m
+[32m  ✓ [39m[90mPyCall[39m
+[32m  ✓ [39m[90mCodecZlib[39m
+[32m  ✓ [39m[90mStructArrays[39m
+[32m  ✓ [39m[90mGPUArrays[39m
+[32m  ✓ [39m[90mDiffResults[39m
+[32m  ✓ [39m[90mContour[39m
+[32m  ✓ [39m[90mTimerOutputs[39m
+[32m  ✓ [39m[90mDataDeps[39m
+[32m  ✓ [39m[90mRandomNumbers[39m
+[32m  ✓ [39m[90mColorTypes[39m
+[32m  ✓ [39m[90mLogExpFunctions[39m
+[32m  ✓ [39m[90mLatexify[39m
+[32m  ✓ [39mPlutoUI
+[32m  ✓ [39m[90mArrayInterface[39m
+[32m  ✓ [39m[90mFriBidi_jll[39m
+[32m  ✓ [39m[90mLibuuid_jll[39m
+[32m  ✓ [39m[90mlibfdk_aac_jll[39m
+[32m  ✓ [39m[90mOpenSSL_jll[39m
+[32m  ✓ [39m[90mZstd_jll[39m
+[32m  ✓ [39m[90mPixman_jll[39m
+[32m  ✓ [39m[90mJpegTurbo_jll[39m
+[32m  ✓ [39m[90mExpat_jll[39m
+[32m  ✓ [39m[90mLibmount_jll[39m
+[32m  ✓ [39m[90mLibiconv_jll[39m
+[32m  ✓ [39m[90mXorg_libXdmcp_jll[39m
+[32m  ✓ [39m[90mlibpng_jll[39m
+[32m  ✓ [39m[90mLz4_jll[39m
+[32m  ✓ [39m[90mOgg_jll[39m
+[32m  ✓ [39m[90mXorg_libXau_jll[39m
+[32m  ✓ [39m[90mx264_jll[39m
+[32m  ✓ [39m[90mLibVPX_jll[39m
+[32m  ✓ [39m[90mXorg_xtrans_jll[39m
+[32m  ✓ [39m[90mLAME_jll[39m
+[32m  ✓ [39m[90mLibffi_jll[39m
+[32m  ✓ [39m[90mPCRE_jll[39m
+[32m  ✓ [39m[90mLibgpg_error_jll[39m
+[32m  ✓ [39m[90mx265_jll[39m
+[32m  ✓ [39m[90mBzip2_jll[39m
+[32m  ✓ [39m[90mOpenSpecFun_jll[39m
+[32m  ✓ [39m[90mLZO_jll[39m
+[32m  ✓ [39m[90mOpus_jll[39m
+[32m  ✓ [39m[90mLLVMExtra_jll[39m
+[32m  ✓ [39m[90mEarCut_jll[39m
+[32m  ✓ [39m[90mXorg_libpthread_stubs_jll[39m
+[32m  ✓ [39m[90mJuno[39m
+[32m  ✓ [39m[90mSortingAlgorithms[39m
+[32m  ✓ [39m[90mRandom123[39m
+[32m  ✓ [39m[90mNNlib[39m
+[32m  ✓ [39m[90mHDF5_jll[39m
+[32m  ✓ [39m[90mLibtiff_jll[39m
+[32m  ✓ [39mColors
+[32m  ✓ [39m[90mChainRules[39m
+[32m  ✓ [39m[90mXML2_jll[39m
+[32m  ✓ [39m[90mBlosc_jll[39m
+[32m  ✓ [39m[90mlibvorbis_jll[39m
+[32m  ✓ [39m[90mLibgcrypt_jll[39m
+[32m  ✓ [39m[90mFreeType2_jll[39m
+[32m  ✓ [39m[90mLLVM[39m
+[32m  ✓ [39m[90mSpecialFunctions[39m
+[32m  ✓ [39m[90mStatsBase[39m
+[32m  ✓ [39m[90mGettext_jll[39m
+[32m  ✓ [39m[90mWayland_jll[39m
+[32m  ✓ [39m[90mGeometryBasics[39m
+[32m  ✓ [39m[90mBlosc[39m
+[32m  ✓ [39m[90mlibass_jll[39m
+[32m  ✓ [39m[90mXSLT_jll[39m
+[32m  ✓ [39m[90mColorSchemes[39m
+[32m  ✓ [39m[90mDiffRules[39m
+[32m  ✓ [39m[90mFontconfig_jll[39m
+[32m  ✓ [39m[90mWayland_protocols_jll[39m
+[32m  ✓ [39m[90mGlib_jll[39m
+[32m  ✓ [39m[90mFFMPEG_jll[39m
+[32m  ✓ [39m[90mHDF5[39m
+[32m  ✓ [39m[90mXorg_libxcb_jll[39m
+[32m  ✓ [39m[90mGPUCompiler[39m
+[32m  ✓ [39m[90mFFMPEG[39m
+[32m  ✓ [39m[90mMAT[39m
+[32m  ✓ [39m[90mXorg_libX11_jll[39m
+[32m  ✓ [39m[90mForwardDiff[39m
+[32m  ✓ [39m[90mXorg_xcb_util_jll[39m
+[32m  ✓ [39m[90mPlotUtils[39m
+[32m  ✓ [39m[90mXorg_libxkbfile_jll[39m
+[32m  ✓ [39mMLDatasets
+[32m  ✓ [39m[90mXorg_libXext_jll[39m
+[32m  ✓ [39m[90mXorg_libXfixes_jll[39m
+[32m  ✓ [39m[90mXorg_libXrender_jll[39m
+[32m  ✓ [39m[90mXorg_xcb_util_image_jll[39m
+[32m  ✓ [39m[90mXorg_xcb_util_keysyms_jll[39m
+[32m  ✓ [39m[90mXorg_xcb_util_renderutil_jll[39m
+[32m  ✓ [39m[90mXorg_xcb_util_wm_jll[39m
+[32m  ✓ [39m[90mZygote[39m
+[32m  ✓ [39m[90mPlotThemes[39m
+[32m  ✓ [39m[90mXorg_xkbcomp_jll[39m
+[32m  ✓ [39m[90mRecipesPipeline[39m
+[32m  ✓ [39m[90mLibglvnd_jll[39m
+[32m  ✓ [39m[90mXorg_libXinerama_jll[39m
+[32m  ✓ [39m[90mXorg_libXi_jll[39m
+[32m  ✓ [39m[90mCairo_jll[39m
+[32m  ✓ [39m[90mXorg_libXrandr_jll[39m
+[32m  ✓ [39m[90mXorg_libXcursor_jll[39m
+[32m  ✓ [39m[90mXorg_xkeyboard_config_jll[39m
+[32m  ✓ [39m[90mGLFW_jll[39m
+[32m  ✓ [39m[90mxkbcommon_jll[39m
+[32m  ✓ [39m[90mQt5Base_jll[39m
+[32m  ✓ [39m[90mGR_jll[39m
+[32m  ✓ [39m[90mGR[39m
+[32m  ✓ [39m[90mCUDA[39m
+[32m  ✓ [39m[90mNNlibCUDA[39m
+[32m  ✓ [39mFlux
+[32m  ✓ [39mPlots
+  156 dependencies successfully precompiled in 150 seconds (17 already precompiled)
+�enabled÷restart_recommended_msg��restart_required_msg��busy_packages��instantiatedëcell_inputs��$25c4f442-fabf-11eb-1266-67f2166634f4��cell_id�$25c4f442-fabf-11eb-1266-67f2166634f4�running_disabled¤code�md"""
+# Lesson 1
+"""�code_folded��$1fe732a2-c34a-407a-9c2d-1443e7331773��cell_id�$1fe732a2-c34a-407a-9c2d-1443e7331773�running_disabled¤code�begin
+	using Flux
+	using Flux: Data.DataLoader
+	using Flux: onehotbatch, onecold, crossentropy
+	using Flux: @epochs
+	using Flux: train!
+	using Statistics
+	using MLDatasets:MNIST
+	
+	using Colors, Plots
+	using PlutoUI
+	
+	ENV["DATADEPS_ALWAYS_ACCEPT"] = true #Necessary for data loading
+end�code_folded��$a92402f6-5db0-414f-8654-7148f95d7f66��cell_id�$a92402f6-5db0-414f-8654-7148f95d7f66�running_disabled¤code٣begin
+	x_train, x_test = (xs -> reshape(xs, (28^2, :))).([imgs_train, imgs_test])
+	y_train, y_test = (ys -> onehotbatch(ys, 0:9)).([labels_train, labels_test])
+end�code_folded��$467e95d6-033a-4b8f-8a0b-6dbf243b4480��cell_id�$467e95d6-033a-4b8f-8a0b-6dbf243b4480�running_disabled¤code��begin
+	imgs_train, labels_train = MNIST.traindata()
+	imgs_test, labels_test = MNIST.testdata()
+	
+	plot(	
+		(plot(Gray.(imgs_train[:, :, i]), 
+			title = labels_train[i], 
+			ticks = false)
+		for i in 1:9)...
+		)
+end�code_folded��$b78286fc-3734-4320-a141-d2e106e41aaa��cell_id�$b78286fc-3734-4320-a141-d2e106e41aaa�running_disabled¤code٭with_terminal() do
+	@epochs 10 begin
+		train!(loss, Flux.params(model), train_batched, Flux.Descent())
+		@show accuracy(x_test, y_test)
+		@show loss(x_test, y_test)
+	end
+end�code_folded��$a6da1f4a-32e0-420e-bf58-aded92d6ff14��cell_id�$a6da1f4a-32e0-420e-bf58-aded92d6ff14�running_disabled¤code�|with_terminal() do
+	println("Test loss: $(loss(x_test, y_test))")
+	println("Test accuracy: $(accuracy(x_test, y_test))")
+end�code_folded��$c31d87c0-a56d-4c44-b8cd-5ad184a8522e��cell_id�$c31d87c0-a56d-4c44-b8cd-5ad184a8522e�running_disabled¤code�begin 
+	model = Chain(
+				Dense(28^2, 256, relu),
+				Dense(256, 100, relu),
+				Dense(100, 10),
+				softmax
+			)
+	
+	loss(x, y) = crossentropy(model(x), y)
+	accuracy(x, y) = mean(onecold(model(x)) .== onecold(y))
+	train_batched = DataLoader((x_train, y_train), batchsize=1000)
+end�code_folded«notebook_id�$db402a72-fae1-11eb-1435-fdba359cda37�in_temp_dir�
