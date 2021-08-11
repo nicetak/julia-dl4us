@@ -4,31 +4,33 @@
 using Markdown
 using InteractiveUtils
 
-# ╔═╡ 1fe732a2-c34a-407a-9c2d-1443e7331773
+# ╔═╡ e292f938-65ab-4fb9-98a0-bc781fa25d2c
 begin
 	using Flux
 	using Flux: Data.DataLoader
 	using Flux: onehotbatch, onecold, crossentropy
 	using Flux: @epochs
 	using Flux: train!
+	using Flux: kaiming_normal
+	using Flux: Dropout
+	
 	using Statistics
-	using MLDatasets:MNIST
+	using MLDatasets:FashionMNIST
+	ENV["DATADEPS_ALWAYS_ACCEPT"] = true #Necessary for data loading
 	
 	using Colors, Plots
-	using PlutoUI
-	
-	ENV["DATADEPS_ALWAYS_ACCEPT"] = true #Necessary for data loading
+	using PlutoUI	
 end
 
-# ╔═╡ 25c4f442-fabf-11eb-1266-67f2166634f4
+# ╔═╡ e629e75e-fae1-11eb-2b0d-a7912e5feb86
 md"""
-# Lesson 1
+# Lesson 1-4
 """
 
-# ╔═╡ 467e95d6-033a-4b8f-8a0b-6dbf243b4480
+# ╔═╡ cccb5076-3f72-4b10-82ab-2592be9041b3
 begin
-	imgs_train, labels_train = MNIST.traindata()
-	imgs_test, labels_test = MNIST.testdata()
+	imgs_train, labels_train = FashionMNIST.traindata()
+	imgs_test, labels_test = FashionMNIST.testdata()
 	
 	plot(	
 		(plot(Gray.(imgs_train[:, :, i]), 
@@ -38,40 +40,65 @@ begin
 		)
 end
 
-# ╔═╡ a92402f6-5db0-414f-8654-7148f95d7f66
+# ╔═╡ f957cb90-b7ec-41f8-9741-a9f4f91232f6
 begin
 	x_train, x_test = (xs -> reshape(xs, (28^2, :))).([imgs_train, imgs_test])
 	y_train, y_test = (ys -> onehotbatch(ys, 0:9)).([labels_train, labels_test])
-end
 
-# ╔═╡ c31d87c0-a56d-4c44-b8cd-5ad184a8522e
-begin 
+	train_batched = DataLoader((x_train, y_train), batchsize=1000)
+	
 	model = Chain(
+				Dense(28^2, 512, relu, init=kaiming_normal),
+				Dense(512, 256, relu, init=kaiming_normal),
+				Dense(256, 128, relu, init=kaiming_normal),
+				Dropout(0.3),
+				Dense(128, 64, relu, init=kaiming_normal),
+				Dense(64, 32, relu, init=kaiming_normal),
+				Dense(32, 10),
+				softmax
+			)
+	
+	loss(x, y) = crossentropy(model(x), y)
+	accuracy(x, y) = mean(onecold(model(x)) .== onecold(y))
+	# cannot implement patience stopping rule easily
+	
+	model0 = Chain(
 				Dense(28^2, 256, relu),
 				Dense(256, 100, relu),
 				Dense(100, 10),
 				softmax
 			)
 	
-	loss(x, y) = crossentropy(model(x), y)
-	accuracy(x, y) = mean(onecold(model(x)) .== onecold(y))
-	train_batched = DataLoader((x_train, y_train), batchsize=1000)
+	loss0(x, y) = crossentropy(model0(x), y)
+	accuracy0(x, y) = mean(onecold(model0(x)) .== onecold(y))
 end
 
-# ╔═╡ b78286fc-3734-4320-a141-d2e106e41aaa
+# ╔═╡ 246ce80f-b70c-41eb-af70-83f0ef6156e4
 with_terminal() do
 	@epochs 10 begin
-		train!(loss, Flux.params(model), train_batched, Flux.Descent())
+		train!(loss, Flux.params(model), train_batched, Flux.ADAM())
 		@show accuracy(x_test, y_test)
 		@show loss(x_test, y_test)
 	end
 end
 
-# ╔═╡ a6da1f4a-32e0-420e-bf58-aded92d6ff14
+# ╔═╡ 760dfec5-8cd2-41bd-ba54-28e549c488ea
+with_terminal() do
+	@epochs 10 begin
+		train!(loss0, Flux.params(model0), train_batched, Flux.Descent())
+		@show accuracy0(x_test, y_test)
+		@show loss0(x_test, y_test)
+	end
+end
+
+# ╔═╡ 2b710ba8-59d2-48f7-93a5-a3fac83ff63c
 with_terminal() do
 	println("Test loss: $(loss(x_test, y_test))")
 	println("Test accuracy: $(accuracy(x_test, y_test))")
+	println("Test loss by model0: $(loss0(x_test, y_test))")
+	println("Test accuracy by model0: $(accuracy0(x_test, y_test))")
 end
+
 
 # ╔═╡ 00000000-0000-0000-0000-000000000001
 PLUTO_PROJECT_TOML_CONTENTS = """
@@ -1243,12 +1270,12 @@ version = "0.9.1+5"
 """
 
 # ╔═╡ Cell order:
-# ╟─25c4f442-fabf-11eb-1266-67f2166634f4
-# ╠═1fe732a2-c34a-407a-9c2d-1443e7331773
-# ╠═467e95d6-033a-4b8f-8a0b-6dbf243b4480
-# ╠═a92402f6-5db0-414f-8654-7148f95d7f66
-# ╠═c31d87c0-a56d-4c44-b8cd-5ad184a8522e
-# ╠═b78286fc-3734-4320-a141-d2e106e41aaa
-# ╠═a6da1f4a-32e0-420e-bf58-aded92d6ff14
+# ╟─e629e75e-fae1-11eb-2b0d-a7912e5feb86
+# ╠═e292f938-65ab-4fb9-98a0-bc781fa25d2c
+# ╠═cccb5076-3f72-4b10-82ab-2592be9041b3
+# ╠═f957cb90-b7ec-41f8-9741-a9f4f91232f6
+# ╠═246ce80f-b70c-41eb-af70-83f0ef6156e4
+# ╠═760dfec5-8cd2-41bd-ba54-28e549c488ea
+# ╠═2b710ba8-59d2-48f7-93a5-a3fac83ff63c
 # ╟─00000000-0000-0000-0000-000000000001
 # ╟─00000000-0000-0000-0000-000000000002
