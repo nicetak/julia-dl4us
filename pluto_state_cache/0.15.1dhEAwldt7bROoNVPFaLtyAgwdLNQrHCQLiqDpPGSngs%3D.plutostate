@@ -1,0 +1,90 @@
+Œ¥bonds€¬cell_results‡Ù$25c4f442-fabf-11eb-1266-67f2166634f4ˆ¦queuedÂ±published_objects€§runningÂ¦output…¤bodyÙ0<div class="markdown"><h1>Lesson 1-2</h1>
+</div>°persist_js_stateÂ¤mime©text/html²last_run_timestampËAØE{7 ¬rootassigneeÀ§cell_idÙ$25c4f442-fabf-11eb-1266-67f2166634f4¹depends_on_disabled_cellsÂ§runtimeÍô§erroredÂÙ$1fe732a2-c34a-407a-9c2d-1443e7331773ˆ¦queuedÂ±published_objects€§runningÂ¦output…¤body‚£msgÚhInitError: PyError (PyImport_ImportModule
+
+The Python package scipy could not be imported by pyimport. Usually this means
+that you did not install scipy in the Python version being used by PyCall.
+
+PyCall is currently configured to use the Python version at:
+
+/usr/bin/python3
+
+and you should use whatever mechanism you usually use (apt-get, pip, conda,
+etcetera) to install the Python package containing the scipy module.
+
+One alternative is to re-configure PyCall to use a different Python
+version on your system: set ENV["PYTHON"] to the path/name of the python
+executable you want to use, run Pkg.build("PyCall"), and re-launch Julia.
+
+Another alternative is to configure PyCall to use a Julia-specific Python
+distribution via the Conda.jl package (which installs a private Anaconda
+Python distribution), which has the advantage that packages can be installed
+and kept up-to-date via Julia.  As explained in the PyCall documentation,
+set ENV["PYTHON"]="", run Pkg.build("PyCall"), and re-launch Julia. Then,
+To install the scipy module, you can use `pyimport_conda("scipy", PKG)`,
+where PKG is the Anaconda package that contains the module scipy,
+or alternatively you can use the Conda package directly (via
+`using Conda` followed by `Conda.add` etcetera).
+
+) <class 'ModuleNotFoundError'>
+ModuleNotFoundError("No module named 'scipy'")
+
+during initialization of module MLDatasetsªstacktraceš…¤call²pyimport(::String)§inlinedÂ¤file©PyCall.jl¤lineÍ&¤pathÙ7/home/runner/.julia/packages/PyCall/BD546/src/PyCall.jl…¤callÙ,pyimport_conda(::String, ::String, ::String)§inlinedÂ¤file©PyCall.jl¤lineÍÄ¤pathÙ7/home/runner/.julia/packages/PyCall/BD546/src/PyCall.jl…¤call®pyimport_conda§inlinedÃ¤file©PyCall.jl¤lineÍÃ¤pathÙ7/home/runner/.julia/packages/PyCall/BD546/src/PyCall.jl…¤callª__init__()§inlinedÂ¤file­MLDatasets.jl¤line>¤pathÙ?/home/runner/.julia/packages/MLDatasets/KMScX/src/MLDatasets.jl…¤callÙ1_include_from_serialized(::String, ::Vector{Any})§inlinedÂ¤fileªloading.jl¤lineÍ¸¤path¬./loading.jl…¤callÙ7_require_search_from_serialized(::Base.PkgId, ::String)§inlinedÂ¤fileªloading.jl¤lineÍ¤path¬./loading.jl…¤call¶_require(::Base.PkgId)§inlinedÂ¤fileªloading.jl¤lineÍü¤path¬./loading.jl…¤callµrequire(::Base.PkgId)§inlinedÂ¤fileªloading.jl¤lineÍ¨¤path¬./loading.jl…¤call»require(::Module, ::Symbol)§inlinedÂ¤fileªloading.jl¤lineÍ›¤path¬./loading.jl…¤call¯top-level scope§inlinedÂ¤fileÙ4lesson1-2.jl#==#1fe732a2-c34a-407a-9c2d-1443e7331773¤line¤pathÙh/home/runner/work/julia-dl4us/julia-dl4us/notebooks/lesson1-2.jl#==#1fe732a2-c34a-407a-9c2d-1443e7331773°persist_js_stateÂ¤mimeÙ'application/vnd.pluto.stacktrace+object²last_run_timestampËAØE‚1ë[¬rootassigneeÀ§cell_idÙ$1fe732a2-c34a-407a-9c2d-1443e7331773¹depends_on_disabled_cellsÂ§runtimeÀ§erroredÃÙ$a92402f6-5db0-414f-8654-7148f95d7f66ˆ¦queuedÂ±published_objects€§runningÂ¦output…¤body‚£msgÙ%UndefVarError: imgs_train not definedªstacktrace‘…¤call¯top-level scope§inlinedÂ¤fileÙ4lesson1-2.jl#==#a92402f6-5db0-414f-8654-7148f95d7f66¤line¤pathÙh/home/runner/work/julia-dl4us/julia-dl4us/notebooks/lesson1-2.jl#==#a92402f6-5db0-414f-8654-7148f95d7f66°persist_js_stateÂ¤mimeÙ'application/vnd.pluto.stacktrace+object²last_run_timestampËAØE‚_ `¬rootassigneeÀ§cell_idÙ$a92402f6-5db0-414f-8654-7148f95d7f66¹depends_on_disabled_cellsÂ§runtimeÀ§erroredÃÙ$467e95d6-033a-4b8f-8a0b-6dbf243b4480ˆ¦queuedÂ±published_objects€§runningÂ¦output…¤body‚£msgÙ UndefVarError: MNIST not definedªstacktrace‘…¤call¯top-level scope§inlinedÂ¤fileÙ4lesson1-2.jl#==#467e95d6-033a-4b8f-8a0b-6dbf243b4480¤line¤pathÙh/home/runner/work/julia-dl4us/julia-dl4us/notebooks/lesson1-2.jl#==#467e95d6-033a-4b8f-8a0b-6dbf243b4480°persist_js_stateÂ¤mimeÙ'application/vnd.pluto.stacktrace+object²last_run_timestampËAØE‚U¬rootassigneeÀ§cell_idÙ$467e95d6-033a-4b8f-8a0b-6dbf243b4480¹depends_on_disabled_cellsÂ§runtimeÀ§erroredÃÙ$b78286fc-3734-4320-a141-d2e106e41aaaˆ¦queuedÂ±published_objects€§runningÂ¦output…¤body‚£msgÙ(UndefVarError: with_terminal not definedªstacktrace‘…¤call¯top-level scope§inlinedÂ¤fileÙ4lesson1-2.jl#==#b78286fc-3734-4320-a141-d2e106e41aaa¤line¤pathÙh/home/runner/work/julia-dl4us/julia-dl4us/notebooks/lesson1-2.jl#==#b78286fc-3734-4320-a141-d2e106e41aaa°persist_js_stateÂ¤mimeÙ'application/vnd.pluto.stacktrace+object²last_run_timestampËAØE‚ÆBJ¬rootassigneeÀ§cell_idÙ$b78286fc-3734-4320-a141-d2e106e41aaa¹depends_on_disabled_cellsÂ§runtimeÀ§erroredÃÙ$a6da1f4a-32e0-420e-bf58-aded92d6ff14ˆ¦queuedÂ±published_objects€§runningÂ¦output…¤body‚£msgÙ(UndefVarError: with_terminal not definedªstacktrace‘…¤call¯top-level scope§inlinedÂ¤fileÙ4lesson1-2.jl#==#a6da1f4a-32e0-420e-bf58-aded92d6ff14¤line¤pathÙh/home/runner/work/julia-dl4us/julia-dl4us/notebooks/lesson1-2.jl#==#a6da1f4a-32e0-420e-bf58-aded92d6ff14°persist_js_stateÂ¤mimeÙ'application/vnd.pluto.stacktrace+object²last_run_timestampËAØE‚ÌØQ¬rootassigneeÀ§cell_idÙ$a6da1f4a-32e0-420e-bf58-aded92d6ff14¹depends_on_disabled_cellsÂ§runtimeÀ§erroredÃÙ$c31d87c0-a56d-4c44-b8cd-5ad184a8522eˆ¦queuedÂ±published_objects€§runningÂ¦output…¤body‚£msgÙ"UndefVarError: x_train not definedªstacktrace‘…¤call¯top-level scope§inlinedÂ¤fileÙ4lesson1-2.jl#==#c31d87c0-a56d-4c44-b8cd-5ad184a8522e¤line¤pathÙh/home/runner/work/julia-dl4us/julia-dl4us/notebooks/lesson1-2.jl#==#c31d87c0-a56d-4c44-b8cd-5ad184a8522e°persist_js_stateÂ¤mimeÙ'application/vnd.pluto.stacktrace+object²last_run_timestampËAØE‚‹‘!¬rootassigneeÀ§cell_idÙ$c31d87c0-a56d-4c44-b8cd-5ad184a8522e¹depends_on_disabled_cellsÂ§runtimeÀ§erroredÃ±cell_dependencies‡Ù$25c4f442-fabf-11eb-1266-67f2166634f4„´precedence_heuristic§cell_idÙ$25c4f442-fabf-11eb-1266-67f2166634f4´downstream_cells_map€²upstream_cells_map‚§@md_str¨getindexÙ$1fe732a2-c34a-407a-9c2d-1443e7331773„´precedence_heuristic§cell_idÙ$1fe732a2-c34a-407a-9c2d-1443e7331773´downstream_cells_mapŒªStatistics§onecold‘Ù$c31d87c0-a56d-4c44-b8cd-5ad184a8522e§PlutoUI¥Plots¤Flux‘Ù$b78286fc-3734-4320-a141-d2e106e41aaa¦Colors¦train!‘Ù$b78286fc-3734-4320-a141-d2e106e41aaa¬crossentropy‘Ù$c31d87c0-a56d-4c44-b8cd-5ad184a8522e§@epochs‘Ù$b78286fc-3734-4320-a141-d2e106e41aaa«onehotbatch‘Ù$a92402f6-5db0-414f-8654-7148f95d7f66ªDataLoader‘Ù$c31d87c0-a56d-4c44-b8cd-5ad184a8522e¥MNIST‘Ù$467e95d6-033a-4b8f-8a0b-6dbf243b4480²upstream_cells_map£ENVÙ$a92402f6-5db0-414f-8654-7148f95d7f66„´precedence_heuristic§cell_idÙ$a92402f6-5db0-414f-8654-7148f95d7f66´downstream_cells_map†§y_train‘Ù$c31d87c0-a56d-4c44-b8cd-5ad184a8522e·anon4786233265556771641·anon9358098170436565389§x_train‘Ù$c31d87c0-a56d-4c44-b8cd-5ad184a8522e¦y_test’Ù$b78286fc-3734-4320-a141-d2e106e41aaaÙ$a6da1f4a-32e0-420e-bf58-aded92d6ff14¦x_test’Ù$b78286fc-3734-4320-a141-d2e106e41aaaÙ$a6da1f4a-32e0-420e-bf58-aded92d6ff14²upstream_cells_mapˆ¡:ªimgs_train‘Ù$467e95d6-033a-4b8f-8a0b-6dbf243b4480©imgs_test‘Ù$467e95d6-033a-4b8f-8a0b-6dbf243b4480§reshape¡^«labels_test‘Ù$467e95d6-033a-4b8f-8a0b-6dbf243b4480¬labels_train‘Ù$467e95d6-033a-4b8f-8a0b-6dbf243b4480«onehotbatch‘Ù$1fe732a2-c34a-407a-9c2d-1443e7331773Ù$467e95d6-033a-4b8f-8a0b-6dbf243b4480„´precedence_heuristic§cell_idÙ$467e95d6-033a-4b8f-8a0b-6dbf243b4480´downstream_cells_map„ªimgs_train‘Ù$a92402f6-5db0-414f-8654-7148f95d7f66©imgs_test‘Ù$a92402f6-5db0-414f-8654-7148f95d7f66«labels_test‘Ù$a92402f6-5db0-414f-8654-7148f95d7f66¬labels_train‘Ù$a92402f6-5db0-414f-8654-7148f95d7f66²upstream_cells_map†¯MNIST.traindata¡:¤plot¤Gray®MNIST.testdata¥MNIST‘Ù$1fe732a2-c34a-407a-9c2d-1443e7331773Ù$b78286fc-3734-4320-a141-d2e106e41aaa„´precedence_heuristic§cell_idÙ$b78286fc-3734-4320-a141-d2e106e41aaa´downstream_cells_map¸anon12254620526793186603²upstream_cells_map¥model‘Ù$c31d87c0-a56d-4c44-b8cd-5ad184a8522e¤Flux‘Ù$1fe732a2-c34a-407a-9c2d-1443e7331773¦train!‘Ù$1fe732a2-c34a-407a-9c2d-1443e7331773¦y_test‘Ù$a92402f6-5db0-414f-8654-7148f95d7f66¤loss‘Ù$c31d87c0-a56d-4c44-b8cd-5ad184a8522e¦x_test‘Ù$a92402f6-5db0-414f-8654-7148f95d7f66§@epochs‘Ù$1fe732a2-c34a-407a-9c2d-1443e7331773­train_batched‘Ù$c31d87c0-a56d-4c44-b8cd-5ad184a8522e«Flux.params¬Flux.Descent­with_terminal¨accuracy‘Ù$c31d87c0-a56d-4c44-b8cd-5ad184a8522e¥@showÙ$a6da1f4a-32e0-420e-bf58-aded92d6ff14„´precedence_heuristic§cell_idÙ$a6da1f4a-32e0-420e-bf58-aded92d6ff14´downstream_cells_map·anon4484872907158293899²upstream_cells_map†­with_terminal¦y_test‘Ù$a92402f6-5db0-414f-8654-7148f95d7f66¨accuracy‘Ù$c31d87c0-a56d-4c44-b8cd-5ad184a8522e¤loss‘Ù$c31d87c0-a56d-4c44-b8cd-5ad184a8522e§println¦x_test‘Ù$a92402f6-5db0-414f-8654-7148f95d7f66Ù$c31d87c0-a56d-4c44-b8cd-5ad184a8522e„´precedence_heuristic§cell_idÙ$c31d87c0-a56d-4c44-b8cd-5ad184a8522e´downstream_cells_map„¥model‘Ù$b78286fc-3734-4320-a141-d2e106e41aaa¨accuracy’Ù$b78286fc-3734-4320-a141-d2e106e41aaaÙ$a6da1f4a-32e0-420e-bf58-aded92d6ff14¤loss’Ù$b78286fc-3734-4320-a141-d2e106e41aaaÙ$a6da1f4a-32e0-420e-bf58-aded92d6ff14­train_batched‘Ù$b78286fc-3734-4320-a141-d2e106e41aaa²upstream_cells_mapŒ¤relu§onecold‘Ù$1fe732a2-c34a-407a-9c2d-1443e7331773¬crossentropy‘Ù$1fe732a2-c34a-407a-9c2d-1443e7331773§softmax§y_train‘Ù$a92402f6-5db0-414f-8654-7148f95d7f66¥Dense¥Chain¡^ªDataLoader‘Ù$1fe732a2-c34a-407a-9c2d-1443e7331773§x_train‘Ù$a92402f6-5db0-414f-8654-7148f95d7f66¢==¤mean´cell_execution_order—Ù$1fe732a2-c34a-407a-9c2d-1443e7331773Ù$25c4f442-fabf-11eb-1266-67f2166634f4Ù$467e95d6-033a-4b8f-8a0b-6dbf243b4480Ù$a92402f6-5db0-414f-8654-7148f95d7f66Ù$c31d87c0-a56d-4c44-b8cd-5ad184a8522eÙ$b78286fc-3734-4320-a141-d2e106e41aaaÙ$a6da1f4a-32e0-420e-bf58-aded92d6ff14©shortpath¬lesson1-2.jl®process_status¥ready¤pathÙ@/home/runner/work/julia-dl4us/julia-dl4us/notebooks/lesson1-2.jlªcell_order—Ù$25c4f442-fabf-11eb-1266-67f2166634f4Ù$1fe732a2-c34a-407a-9c2d-1443e7331773Ù$467e95d6-033a-4b8f-8a0b-6dbf243b4480Ù$a92402f6-5db0-414f-8654-7148f95d7f66Ù$c31d87c0-a56d-4c44-b8cd-5ad184a8522eÙ$b78286fc-3734-4320-a141-d2e106e41aaaÙ$a6da1f4a-32e0-420e-bf58-aded92d6ff14¥nbpkg‡²installed_versions†ªStatistics¦stdlibªMLDatasets¥0.5.9§PlutoUI¥0.7.9¤Flux¦0.12.6¥Plots¦1.20.0¦Colors¦0.12.8°terminal_outputs†ªStatisticsÙƒ[32m[1m  No Changes[22m[39m to `/tmp/jl_etzMkn/Project.toml`
+[32m[1m  No Changes[22m[39m to `/tmp/jl_etzMkn/Manifest.toml`
+ªMLDatasetsÙƒ[32m[1m  No Changes[22m[39m to `/tmp/jl_etzMkn/Project.toml`
+[32m[1m  No Changes[22m[39m to `/tmp/jl_etzMkn/Manifest.toml`
+§PlutoUIÙƒ[32m[1m  No Changes[22m[39m to `/tmp/jl_etzMkn/Project.toml`
+[32m[1m  No Changes[22m[39m to `/tmp/jl_etzMkn/Manifest.toml`
+¥PlotsÙƒ[32m[1m  No Changes[22m[39m to `/tmp/jl_etzMkn/Project.toml`
+[32m[1m  No Changes[22m[39m to `/tmp/jl_etzMkn/Manifest.toml`
+¤FluxÙƒ[32m[1m  No Changes[22m[39m to `/tmp/jl_etzMkn/Project.toml`
+[32m[1m  No Changes[22m[39m to `/tmp/jl_etzMkn/Manifest.toml`
+¦ColorsÙƒ[32m[1m  No Changes[22m[39m to `/tmp/jl_etzMkn/Project.toml`
+[32m[1m  No Changes[22m[39m to `/tmp/jl_etzMkn/Manifest.toml`
+§enabledÃ·restart_recommended_msgÀ´restart_required_msgÀ­busy_packages¬instantiatedÃ«cell_inputs‡Ù$25c4f442-fabf-11eb-1266-67f2166634f4„§cell_idÙ$25c4f442-fabf-11eb-1266-67f2166634f4°running_disabledÂ¤code¶md"""
+# Lesson 1-2
+"""«code_foldedÃÙ$1fe732a2-c34a-407a-9c2d-1443e7331773„§cell_idÙ$1fe732a2-c34a-407a-9c2d-1443e7331773°running_disabledÂ¤codeÚbegin
+	using Flux
+	using Flux: Data.DataLoader
+	using Flux: onehotbatch, onecold, crossentropy
+	using Flux: @epochs
+	using Flux: train!
+	using Statistics
+	using MLDatasets:MNIST
+	ENV["DATADEPS_ALWAYS_ACCEPT"] = true #Necessary for data loading
+	
+	using Colors, Plots
+	using PlutoUI	
+end«code_foldedÂÙ$a92402f6-5db0-414f-8654-7148f95d7f66„§cell_idÙ$a92402f6-5db0-414f-8654-7148f95d7f66°running_disabledÂ¤codeÙ£begin
+	x_train, x_test = (xs -> reshape(xs, (28^2, :))).([imgs_train, imgs_test])
+	y_train, y_test = (ys -> onehotbatch(ys, 0:9)).([labels_train, labels_test])
+end«code_foldedÂÙ$467e95d6-033a-4b8f-8a0b-6dbf243b4480„§cell_idÙ$467e95d6-033a-4b8f-8a0b-6dbf243b4480°running_disabledÂ¤codeÙ×begin
+	imgs_train, labels_train = MNIST.traindata()
+	imgs_test, labels_test = MNIST.testdata()
+	
+	plot(	
+		(plot(Gray.(imgs_train[:, :, i]), 
+			title = labels_train[i], 
+			ticks = false)
+		for i in 1:9)...
+		)
+end«code_foldedÂÙ$b78286fc-3734-4320-a141-d2e106e41aaa„§cell_idÙ$b78286fc-3734-4320-a141-d2e106e41aaa°running_disabledÂ¤codeÙ­with_terminal() do
+	@epochs 10 begin
+		train!(loss, Flux.params(model), train_batched, Flux.Descent())
+		@show accuracy(x_test, y_test)
+		@show loss(x_test, y_test)
+	end
+end«code_foldedÂÙ$a6da1f4a-32e0-420e-bf58-aded92d6ff14„§cell_idÙ$a6da1f4a-32e0-420e-bf58-aded92d6ff14°running_disabledÂ¤codeÙ|with_terminal() do
+	println("Test loss: $(loss(x_test, y_test))")
+	println("Test accuracy: $(accuracy(x_test, y_test))")
+end«code_foldedÂÙ$c31d87c0-a56d-4c44-b8cd-5ad184a8522e„§cell_idÙ$c31d87c0-a56d-4c44-b8cd-5ad184a8522e°running_disabledÂ¤codeÚbegin 
+	model = Chain(
+				Dense(28^2, 256, relu),
+				Dense(256, 100, relu),
+				Dense(100, 10),
+				softmax
+			)
+	
+	loss(x, y) = crossentropy(model(x), y)
+	accuracy(x, y) = mean(onecold(model(x)) .== onecold(y))
+	train_batched = DataLoader((x_train, y_train), batchsize=1000)
+end«code_foldedÂ«notebook_idÙ$eeeb0e4e-faf9-11eb-1fff-499725ff6f24«in_temp_dirÂ
